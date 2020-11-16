@@ -1,0 +1,32 @@
+.Navbar {
+  display: flex;
+  background-color: #306FDB;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+.Logo{
+  width: 70px;
+  height: 35px;
+}
+
+.title a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Roboto';
+  color: white;
+  font-size: 10px;
+}
+
+.title a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.title a.active {
+  color: yellow;
+}

@@ -1,0 +1,49 @@
+:root{
+	--rose:#FE2055;
+	--bleu:#0F06FF;
+	--jaune:#ffff00;
+}
+
+.Page {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.Widget {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.Title {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 30%;
+   color: white;
+   font-family: 'Roboto';
+   font-size: 3em;
+   font-weight: bolder;
+}
+
+.butn {
+  padding: 1em;
+  border: 2px solid var(--jaune);
+  border-radius: 10px;
+	top: 65%;
+	left: 45%;
+  width: 80px;
+  height: 80px;
+	position: absolute;
+}
+
+.butn:hover{
+	text-align: center;
+	color: var(--noir);
+	transition-delay: 0.1s;
+	background: var(--jaune);
+	box-shadow: 0 0 10px var(--jaune), 0 0 40px var(--jaune), 0 0 80px var(--jaune);
+}
