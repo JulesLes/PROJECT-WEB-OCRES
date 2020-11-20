@@ -8,6 +8,7 @@ import Rechercher from '../components/meteo/Rechercher';
 import SemaineContainer from '../components/meteo/SemaineContainer';
 import {useState, useEffect} from 'react';
 import NewsWidget from '../components/News/NewsWidget.js';
+import Bourse from '../components/Bourse/Bourse.js'
 
 export default function Home() {
 
@@ -31,9 +32,9 @@ export default function Home() {
             </Link>
         </div>
         <div class="Widget" style={{backgroundImage: `url(${widdgetBack})` }} id="widget">
-          <Rechercher parentCallback={handleChange}/>
-          <SemaineContainer ville={ville}/>
-          <NewsWidget/>
+            <Rechercher parentCallback={handleChange}/>
+            <SemaineContainer ville={ville}/>
+            <NewsWidget/>
         </div>
       </div>
     );
