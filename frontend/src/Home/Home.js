@@ -4,9 +4,24 @@ import widdgetBack from "../image/widget.jpg";
 import down from "../image/down-chevron.png";
 import homepage  from "../image/WidgetBack.jpg";
 import {Link} from 'react-scroll';
+import Rechercher from '../components/meteo/Rechercher';
+import SemaineContainer from '../components/meteo/SemaineContainer';
+import {useState, useEffect} from 'react';
+import NewsWidget from '../components/News/NewsWidget.js';
 
-export default class Home extends Component {
-  render() {
+export default function Home() {
+
+        const [ville, setVille] = useState('Paris')
+
+        const handleChange = (ville) => {
+          setVille(ville)
+          console.log(ville)
+        }
+
+        useEffect(()=>{
+          console.log(ville)
+        },[ville])
+
     return (
       <div className="Home">
         <div class="Page" style={{backgroundImage: `url(${homepage})` }} id="home">
@@ -16,8 +31,10 @@ export default class Home extends Component {
             </Link>
         </div>
         <div class="Widget" style={{backgroundImage: `url(${widdgetBack})` }} id="widget">
+          <Rechercher parentCallback={handleChange}/>
+          <SemaineContainer ville={ville}/>
+          <NewsWidget/>
         </div>
       </div>
     );
-  }
 }
