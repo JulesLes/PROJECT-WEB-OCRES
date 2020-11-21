@@ -35,6 +35,7 @@ export default function Home() {
             <Rechercher parentCallback={handleChange}/>
             <SemaineContainer ville={ville}/>
             <NewsWidget/>
+            <Bourse />
         </div>
       </div>
     );
