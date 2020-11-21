@@ -1,6 +1,7 @@
 import React from 'react';
 import DayCard from './Daycard';
 import {useEffect, useState} from 'react';
+import './Meteo.css';
 
 export default (props) => {
 
@@ -27,8 +28,8 @@ export default (props) => {
   },[props.ville])
 
   return (
-    <div className="container">
-        <h5 className="display text-muted">{props.ville}</h5>
+    <div className="Semaine">
+        <h5>Météo de {props.ville}</h5>
             <div className="row justify-content-center">
               {formatDayCards()}
             </div>

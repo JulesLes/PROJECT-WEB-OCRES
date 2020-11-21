@@ -1,9 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+
 .widgetBourse{
     background-color: rgba(35, 35, 35, 0.6);
     border-radius: 15px;
-    margin: 10px;
-    margin: 10px;
-    position:absolute;
-    left: 10px;
+    margin: 1vw;
     color:white;
+    max-width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.widgetBourse h5 {
+    font-family: 'Kaushan Script';
+    font-size: 1.5em;
+    padding: 10px 0px 0px 10px;
+}
+
+.Titre a{
+    margin: 20px;
+    font-family: 'Roboto';
+}
+
+.Lignes {
+    font-family: 'Roboto';
+        font-size: 0.9em;
 }

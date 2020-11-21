@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+
+.Jour{
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px 0px 10px;
+}
+
+.Container {
+    display: flex;
+    position: static;
+    color:white;
+    font-family: 'Roboto';
+}
+
+.Semaine {
+    border-radius: 15px;
+    background-color: rgba(35, 35, 35, 0.6);
+    width: 650px;
+    position: absolute;
+    left: 1vw;
+}
+
+.Semaine h5 {
+    color: white;
+    font-family: 'Kaushan Script';
+    font-size: 1.5em;
+    padding: 10px 0px 0px 10px;
+    
+}
+
+

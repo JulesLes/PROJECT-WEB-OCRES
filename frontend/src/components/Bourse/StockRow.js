@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { iex } from './iex.js';
+import { Container, Row, Col } from 'reactstrap';
+import './Bourse.css';
 
 export default class StockRow extends Component{
     constructor(props) {
@@ -24,10 +26,14 @@ export default class StockRow extends Component{
 
     render() {
         return (
-            <tr>
-                <td>{this.props.ticker}</td>
-                <td>{this.state.data.close}</td>
-            </tr>
+            <Row className="Lignes">
+                <Col sm="6">
+                    <a>{this.props.ticker}</a>
+                </Col>
+                <Col sm="6">
+                    <a>{this.state.data.close}</a>
+                </Col>
+            </Row>
         );
     }
 }

@@ -33,9 +33,9 @@ export default function Home() {
         </div>
         <div class="Widget" style={{backgroundImage: `url(${widdgetBack})` }} id="widget">
             <Rechercher parentCallback={handleChange}/>
+            <Bourse />
             <SemaineContainer ville={ville}/>
             <NewsWidget/>
-            <Bourse />
         </div>
       </div>
     );

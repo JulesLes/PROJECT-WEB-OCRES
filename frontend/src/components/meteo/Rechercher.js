@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Rechercher.css';
 
 export default class Rechercher extends React.Component {
   constructor(props) {
@@ -23,8 +23,7 @@ export default class Rechercher extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
                 <label>
-                   Ville:
-                   <input type="text" value={this.state.value} onChange={this.handleChange} />
+                   <input type="text" placeholder="Saisissez votre ville" value={this.state.value} onChange={this.handleChange} />
                 </label>
               <input type="submit" value="Envoyer" onClick={() => this.props.parentCallback(this.state.value)}/>
       </form>
