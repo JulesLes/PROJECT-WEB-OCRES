@@ -1,5 +1,7 @@
 # Widgy - Your dashboard
 
+![picture](frontend/src/image/Logo.png)
+
 Ce README présente les membres de l'équipe projet, la description du projet réalisé, la documentation permettant le lancement du projet, les quelques difficultés rencontrées et le lien de notre Trello permettant la répartition du travail :
 
 ## Membres de l'équipe projet
