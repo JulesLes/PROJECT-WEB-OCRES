@@ -6,7 +6,7 @@ Ce README présente les membres de l'équipe projet, la description du projet r�
 
 ## Membres de l'équipe projet
 
-Le projet Widgy, comprenant Frontend et Backend, a été réalisé par Jules Lestrade et Mickaël Gremy.
+Le projet Widgy, comprenant Frontend et Backend, a été réalisé par Jules Lestrade et Mickaël Gremy. Nous sommes, tous les 2, issus du Master 1 orienté Objets Connectés, Réseaux et Services au sein de l'ECE Paris. Ce projet est en lien avec notre mentor et professeur de technologies Web Adrien Kourganoff, lui même, issu de cette même formation.
 
 ## Description du projet réalisé
 
@@ -23,9 +23,11 @@ Notre dashboard propose de nombreux contenus et vise les chefs d'entreprise ayan
 
 ## Lancement du projet
 
-Le projet a été conçu en ReactJS et utilise NodeJS. Afin de permettre un lancement correct de notre projet, veuillez lancer votre terminal et rendez-vous dans le dossier frontend via la commande cd. Enfin, saisissez npm start qui vous permettra de lancer le navigateur internet en Localhost.
+Le projet a été conçu en ReactJS et utilise NodeJS. Afin de permettre un lancement correct de notre projet, veuillez suivre les instructions si dessous :
 
-Après avoir lancé la partie frontend de notre projet, ouvrez une nouvelle fenêtre de votre terminal et rendez-vous dans le dossier backend via la commande cd. Enfin, saisissez npm start qui vous permettra de lancer un second navigateur interrnet en Localhost.
+- Pour la partie <b>Frontend</b>, veuillez lancer votre terminal et rendez-vous dans le dossier frontend du dossier PROJECT-WEB-OCRES via la commande cd. Saisissez npm start qui vous permettra de lancer le navigateur internet en localhost ;
+
+- Pour la partie <b>Backend</b>, après avoir lancé la partie frontend de notre projet, ouvrez une nouvelle fenêtre de votre terminal et rendez-vous dans le dossier backend du dossier PROJECT-WEB-OCRES via la commande cd. Enfin, saisissez npm start qui vous permettra de lancer un second navigateur interrnet en localhost.
 
 ## Difficultés rencontrées
 
@@ -33,9 +35,11 @@ Comme dans la plupart des projet qui viennent d'être créé, de nombreuses diff
 
 Il nous fallait, tout d'abord, comprendre ce qui nous était demandé et surtout organiser le travail qu'il était nécessaire d'effectuer. La tâche la plus difficile à été de réaliser le premier widget, comprendre l'appel à une API, récupérer les informations envoyées par celle-ci.
 
+Une fois cette étape réalisée, les tâches suivantes ont été plus simple et ce projet nous a permis de comprendre un nouvel langage qu'était le ReactJS. Nous sommes fiers, aujourd'hui, de vous le présenter.
+
 ## Répartition du travail
 
-Afin de visualiser l'ensemble du travail effectué et la répartition des tâches entre membres de l'équipe projet, rendez-vous sur le Trello ci-joint : 
+Un projet réussi est structuré et organisé de façon à répartir les différentes tâches à réaliser entre les différents membres. Afin de visualiser l'ensemble du travail effectué et la répartition des tâches entre membres de l'équipe projet, rendez-vous sur le Trello de Widgy ci-joint : 
 
 <p align="center">
  <a href="https://trello.com/b/Hjukhlm3/widgy">Trello de Widgy</a>
