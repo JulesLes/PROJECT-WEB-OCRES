@@ -1,6 +1,6 @@
 # Widgy - Your dashboard
 
-Ce README présente les membres de l'équipe projet, la description du projet réalisé, la documentation permettant le lancement du projet, les quelques difficultés rencontrées et le lien de notre Trello permettant la repartition du travail :
+Ce README présente les membres de l'équipe projet, la description du projet réalisé, la documentation permettant le lancement du projet, les quelques difficultés rencontrées et le lien de notre Trello permettant la répartition du travail :
 
 ## Membres de l'équipe projet
 
@@ -17,7 +17,7 @@ Notre projet est un dashboard regroupant 6 widgets différents :
 - Un indicateur de gros titres permettant de visualiser, en temps réel, les 3 informations nationales essentielles de différents journaux ;
 - Un indicateur footballistique permettant de visualiser les statistiques d'un club de football. Ce widget reprend la librairie Recharts et offre l'affichage de graphiques ;
 
-Notre dashboard propose de nombreux contenus et vise les chefs d'entreprise ayant besoin de données en temps réel : les statistiques du Covid-19 peuvent influencer l'ensemble des autres widgets : un confinement pourrait changer le cours des actions ou la météo par exemple. De même, cette pandémie revient très souvent aux informations nationales et pourrait impliquer une surveillance accrue des dernières news.
+Notre dashboard propose de nombreux contenus et vise les chefs d'entreprise ayant besoin de données en temps réel : les statistiques du Covid-19 peuvent influencer l'ensemble des autres widgets : un confinement pourrait changer le cours des actions ou la météo par exemple. De même, cette pandémie revient très souvent aux informations nationales et pourrait nécessiter une surveillance accrue des derniers articles parus.
 
 ## Lancement du projet
 
