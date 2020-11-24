@@ -29,7 +29,8 @@ export default (props) => {
 
   return (
     <div className="Semaine">
-        <h5>Météo de {props.ville}</h5>
+        <h5>{props.ville} weather forecast</h5>
+        <br/>
             <div className="row justify-content-center">
               {formatDayCards()}
             </div>

@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+.widgetCountry{
+    background-color: rgba(35, 35, 35, 0.6);
+    border-radius: 15px;
+    color:white;
+    width: 360px;
+    align-items: center;
+    justify-content: center;
+}
+
+.widgetCountry h5{
+  font-family: 'Oswald';
+  font-size: 1.5em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.Titre {
+    font-family: 'Roboto';
+    font-size: 0.9em;
+}
+
+.colone {
+  margin: 0 4px 0 4px;
+}
+
+.widgetCountry:hover{
+    background-color: rgba(60, 65, 219, 0.6);
+}

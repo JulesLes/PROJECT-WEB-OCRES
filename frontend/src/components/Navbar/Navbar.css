@@ -1,0 +1,44 @@
+.Navbar {
+  display: flex;
+  background-color: #E53824;
+  position: fixed;
+  width: 100%;
+  height: 24px;
+  z-index: 10000;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.Logo{
+  width: 70px;
+  height: 35px;
+}
+
+.title a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Roboto';
+  color: white;
+  font-size: 10px;
+}
+
+.title a:hover {
+  background-color: #aaa;
+  color: white;
+  text-decoration: none;
+  max-height: 33px;
+}
+
+.title a.active {
+  color: black;
+  text-decoration: none;
+}
+
+.Link {
+  margin: 0px;
+  padding: 0px;
+}

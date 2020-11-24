@@ -36,7 +36,7 @@ export default class NewsWidget extends Component {
     };
 
     componentDidMount() {
-        var url = `https://newsapi.org/v2/top-headlines?country=fr&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
+        var url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
         this.loadNews(url);
     }
 
@@ -58,8 +58,8 @@ export default class NewsWidget extends Component {
         const {newsToDisplay2} = this.state;
         const {newsToDisplay3} = this.state;
         return (
-            <div className="widget">
-              <h1>Gros titres</h1>
+            <div className="widgetNews">
+              <h5>News</h5>
               <div className="article">
                 <div>
                   <div className="source">{newsToDisplay1.source ? newsToDisplay1.source.name : '?'}</div>

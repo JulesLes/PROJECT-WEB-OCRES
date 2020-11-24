@@ -1,19 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 @import url(http://fonts.googleapis.com/css?family=News+Cycle);
-@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 
-.widget{
+.widgetNews{
     background-color: rgba(35, 35, 35, 0.6);
     border-radius: 15px;
     max-width: 400px;
-    margin: 10px;
-    position:absolute;
-    right: 1vw;
+    height: 415px;
+    padding: 0;
+    margin: 0;
 }
 
-.widget h1{
+.widgetNews:hover{
+    background-color: rgba(60, 65, 219, 0.6);
+    padding: 0;
+    margin: 0;
+}
+
+.widgetNews h5{
   padding: 10px 0px 0px 10px;
-  font-family: 'Kaushan Script';
+  font-family: 'Oswald';
   font-weight: bold;
   font-size: 1.5em;
   text-align: center;
@@ -44,7 +50,7 @@
 }
 
 .titre:hover {
-    color: red;
+    color: bla;
     text-decoration: none;
     transition: 0.2;
 }

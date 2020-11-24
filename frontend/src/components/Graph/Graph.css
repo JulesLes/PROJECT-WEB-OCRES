@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+.widgetGraph {
+  background-color: rgba(35, 35, 35, 0.6);
+  border-radius: 15px;
+  height: fit-content;
+  width: 650px;
+  color: white;
+}
+
+.widgetGraph h5{
+  font-family: 'Oswald';
+  font-size: 1.5em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.graph {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.widgetGraph:hover{
+    background-color: rgba(60, 65, 219, 0.6);
+}
+
+.test{
+  font-size: 0.7em;
+  color: black;
+}

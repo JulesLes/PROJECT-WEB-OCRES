@@ -8,7 +8,7 @@ export default class Bourse extends React.Component {
   render(){
     return (
         <div className="widgetBourse">
-            <h5>Bourse</h5>
+            <h5>Stock Market</h5>
             <Row className="Titre">
                 <Col sm="6">
                     <b>Stocks</b>
@@ -17,7 +17,7 @@ export default class Bourse extends React.Component {
                     <b>Price</b>
                 </Col>
             </Row>
-        
+
             <StockRow ticker="goog" />
             <StockRow ticker="aapl" />
             <StockRow ticker="fb" />
