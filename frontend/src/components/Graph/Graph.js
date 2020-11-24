@@ -31,12 +31,16 @@ export default class Example extends PureComponent {
       <div className="widgetGraph">
           <h5>Hospitalizations due to Covid-19</h5>
             <div className="graph">
-                  <AreaChart className="test" width={600} height={275} data={this.state.data.reverse()} margin={{ top: 10, right: 30, left: 0, bottom: 0,}}>
-                    <XAxis dataKey="date" stroke="#fff"/>
-                    <YAxis stroke="#fff"/>
-                    <Tooltip/>
-                    <Area type="monotone" dataKey="hospitalizedCurrently" stroke="#000" fill="#f7ff3c" />
-                  </AreaChart>
+                <ResponsiveContainer width="95%" height={275}>
+   
+                      <AreaChart className="test" width={600} height={275} data={this.state.data.reverse()} margin={{ top: 10, right: 30, left: 0, bottom: 0,}}>
+                        <XAxis dataKey="date" stroke="#fff"/>
+                        <YAxis stroke="#fff"/>
+                        <Tooltip/>
+                        <Area type="monotone" dataKey="hospitalizedCurrently" stroke="#000" fill="#f7ff3c" />
+                      </AreaChart>
+
+                </ResponsiveContainer>
           </div>
       </div>
     );
