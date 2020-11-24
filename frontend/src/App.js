@@ -10,17 +10,24 @@ function App() {
   return (
     <Router>
        <div className="App">
-    <Navigation />
-    <Switch>
-        <Route path='/Settings'>
-           <Settings/>
-        </Route>
-       <Route path='/'>
-          <HomePage/>
-       </Route>
-    </Switch>
+    
+            <div className="navbar" id="mn_menu">
+                <Navigation />
+            </div>
+            <Switch>
+        
+                <Route path='/Settings'>
+                    <Settings/>
+                </Route>
+            
+                <Route path='/'>
+                    <HomePage/>
+                </Route>
+        
+            </Switch>
       </div>
-   </Router>
+   
+    </Router>
   );
 }
 
