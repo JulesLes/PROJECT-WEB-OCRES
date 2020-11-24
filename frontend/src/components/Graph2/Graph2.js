@@ -19,7 +19,7 @@ export default class Graph2 extends PureComponent {
       <div className="widgetGraph2">
           <h5>Pie</h5>
             <ResponsiveContainer width="95%" height={300}>
-                <PieChart width={200} height={300} onMouseEnter={this.onPieEnter}>
+                <PieChart onMouseEnter={this.onPieEnter} margin={{ top: 0, left: 0, right: 0, bottom: 0 }}>
                 <Pie
                   data={data}
                   cx={100}

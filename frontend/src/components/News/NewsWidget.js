@@ -59,28 +59,30 @@ export default class NewsWidget extends Component {
         const {newsToDisplay3} = this.state;
         return (
             <div className="widgetNews">
-              <h5>News</h5>
-              <div className="article">
                 <div>
-                  <div className="source">{newsToDisplay1.source ? newsToDisplay1.source.name : '?'}</div>
-                  <a className="titre" href={newsToDisplay1['url']}>{newsToDisplay1['title']}</a>
+                  <h5>News</h5>
+                  <div className="article">
+                    <div>
+                      <div className="source">{newsToDisplay1.source ? newsToDisplay1.source.name : '?'}</div>
+                      <a className="titre" href={newsToDisplay1['url']}>{newsToDisplay1['title']}</a>
+                    </div>
+                      <img className="image" src={newsToDisplay1['urlToImage']} alt="news img"/>
+                  </div>
+                  <div className="article">
+                    <div>
+                      <div className="source">{newsToDisplay2.source ? newsToDisplay2.source.name : '?'}</div>
+                      <a className="titre" href={newsToDisplay2['url']}>{newsToDisplay2['title']}</a>
+                    </div>
+                    <img className="image" src={newsToDisplay2['urlToImage']} alt="news img"/>
+                  </div>
+                  <div className="article">
+                    <div>
+                      <div className="source">{newsToDisplay3.source ? newsToDisplay3.source.name : '?'}</div>
+                      <a className="titre" href={newsToDisplay3['url']}>{newsToDisplay3['title']}</a>
+                    </div>
+                    <img className="image" src={newsToDisplay3['urlToImage']} alt="news img"/>
+                  </div>
                 </div>
-                  <img className="image" src={newsToDisplay1['urlToImage']} alt="news img"/>
-              </div>
-              <div className="article">
-                <div>
-                  <div className="source">{newsToDisplay2.source ? newsToDisplay2.source.name : '?'}</div>
-                  <a className="titre" href={newsToDisplay2['url']}>{newsToDisplay2['title']}</a>
-                </div>
-                <img className="image" src={newsToDisplay2['urlToImage']} alt="news img"/>
-              </div>
-              <div className="article">
-                <div>
-                  <div className="source">{newsToDisplay3.source ? newsToDisplay3.source.name : '?'}</div>
-                  <a className="titre" href={newsToDisplay3['url']}>{newsToDisplay3['title']}</a>
-                </div>
-                <img className="image" src={newsToDisplay3['urlToImage']} alt="news img"/>
-              </div>
             </div>
         );
     }

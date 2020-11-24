@@ -16,15 +16,14 @@
 .Semaine {
     border-radius: 15px;
     background-color: rgba(35, 35, 35, 0.6);
-    width: 650px;
-    height: 415px;
     margin: 0;
-    padding: 0;
+    padding: 0.5vw;
+    min-height: 415px;
 }
 
 .Semaine:hover{
     background-color: rgba(60, 65, 219, 0.6);
-    padding: 0;
+    padding: 0.5vw;
     margin: 0;
 }
 

@@ -12,6 +12,7 @@ import Country from '../components/Country/Country.js';
 import Covid_19 from '../components/Covid19/Covid_19.js';
 import Graph from '../components/Graph/Graph.js';
 import Graph2 from '../components/Graph2/Graph2.js'
+import ResponsiveContainer from "react-responsive-widget";
 
 
 
@@ -37,34 +38,32 @@ export default function Home() {
             </Link>
         </div>
         <div className="Widget" style={{backgroundImage: `url(${widdgetBack})` }} id="widget">
+                
+            <ResponsiveContainer xs="450" md="700" lg="1300">
+                <div className="app-row" style={{margin: 0, padding: 0}}>
+                    
+                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 2}}><Graph /></div>
+                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 2}}><Covid_19/></div>
+                    <div className="app-col-xs-12 app-col-md-6 app-col-lg-3" style={{padding: 2}}><Bourse /></div>
+                    <div className="app-col-xs-12 app-col-md-6 app-col-lg-3" style={{padding: 2}}><Country /></div>
+    
+                </div>
 
-              <div className="haut">
-                  <div className="hautGauche">
-                      <Covid_19/>
-                      <div className="hautBas">
-                          <Bourse />
-                          <div className="Country">
-                              <Country />
-                          </div>
-                      </div>
-                  </div>
-                  <div className="droite">
-                      <Graph />
-                  </div>
-              </div>
+            </ResponsiveContainer>
 
-              <div className="bas">
-                  <div className="meteo">
-                      <SemaineContainer ville={ville}/>
-                  </div>
-                  <div className="Actualites">
-                      <NewsWidget/>
-                  </div>
-                  <div className="pin">
-                      <Graph2 />
-                  </div>
-              </div>
-      </div>
+            <ResponsiveContainer xs="450" md="700" lg="1300">
+
+                <div className="app-row2" style={{margin: 0, padding: 0}}>
+
+                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 2}}><SemaineContainer ville={ville}/></div>
+                    <div className="app-col-xs-12 app-col-md-8 app-col-lg-4" style={{padding: 2}}><NewsWidget/></div>
+                    <div className="app-col-xs-12 app-col-md-4 app-col-lg-2" style={{padding: 2}}><Graph2 /></div>
+
+                </div>
+
+            </ResponsiveContainer>
+            
+        </div>
     </div>
     );
 }

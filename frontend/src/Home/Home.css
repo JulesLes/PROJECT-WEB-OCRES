@@ -6,10 +6,10 @@
 	padding:0;
 }
 .Page {
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -17,25 +17,26 @@
 }
 
 .Widget {
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 .Title {
-   color: white;
-   font-family: 'Roboto';
-   font-size: 3em;
-   font-weight: bolder;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 3em;
+    font-weight: bolder;
 }
 
 .butn {
-  padding: 1em;
-  border: 2px solid var(--orange);
-  border-radius: 10px;
-  width: 80px;
-  height: 80px;
+    padding: 1em;
+    border: 2px solid var(--orange);
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
 }
 
 .butn:hover{
@@ -46,34 +47,10 @@
 	box-shadow: 0 0 10px var(--orange), 0 0 40px var(--orange), 0 0 80px var(--orange);
 }
 
-.haut{
-	display: flex;
-	padding: 1vw;
+.ResponsiveContainer {
+    margin: 0;
+    padding: 0;
 }
 
-.hautBas{
-	display: flex;
-	padding-top: 1vw;
-}
 
-.Country{
-	padding-left: 1vw;
-}
 
-.droite{
-	padding-left: 1vw;
-}
-
-.bas{
-	display: flex;
-	padding: 0 0 0 1vw;
-	margin: 0;
-}
-
-.Actualites{
-	padding-left: 1vw;
-}
-
-.pin{
-	padding-left: 1vw;
-}

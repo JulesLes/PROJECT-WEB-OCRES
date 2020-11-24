@@ -5,9 +5,9 @@
     background-color: rgba(35, 35, 35, 0.6);
     border-radius: 15px;
     color:white;
-    width: 275px;
     align-items: center;
     justify-content: center;
+    min-height: 203px;
 }
 
 .widgetBourse:hover{
