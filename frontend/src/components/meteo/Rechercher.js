@@ -1,5 +1,4 @@
 import React from 'react';
-import './Rechercher.css';
 
 export default class Rechercher extends React.Component {
   constructor(props) {

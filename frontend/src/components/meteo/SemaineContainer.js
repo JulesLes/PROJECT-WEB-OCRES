@@ -1,5 +1,6 @@
 import React from 'react';
 import DayCard from './Daycard';
+import NameForm from '../../Settings/NameForm';
 import {useEffect, useState} from 'react';
 import './Meteo.css';
 

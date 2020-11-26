@@ -28,10 +28,6 @@ export default class Covid_19 extends React.Component {
           });
   }
 
-  // numberWithSpaces(x) {
-  //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  // }
-
   render(){
     const {toDisplay} = this.state;
     return (
