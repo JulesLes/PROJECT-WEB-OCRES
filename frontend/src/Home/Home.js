@@ -13,6 +13,7 @@ import Covid_19 from '../components/Covid19/Covid_19.js';
 import Graph from '../components/Graph/Graph.js';
 import Graph2 from '../components/Graph2/Graph2.js'
 import ResponsiveContainer from "react-responsive-widget";
+import Menu from '../components/Navbar/Menu';
 
 
 
@@ -32,6 +33,9 @@ export default function Home() {
     return (
       <div className="Home">
         <div className="Page" style={{backgroundImage: `url(${homepage})` }} id="home">
+            <div className="navbar" id="mn_menu2">
+                <Menu />
+            </div>
             <p className="Title">Welcome to the future<br />of Widgets</p>
             <Link activeClass="active" to="widget" spy={true} smooth={true}>
               <img className="butn" src={down}/>

@@ -13,7 +13,7 @@ Le projet Widgy, comprenant Frontend et Backend, a été réalisé par <b>Jules 
 Notre projet est un dashboard regroupant <b>7 widgets différents</b> :
 
 - Un <b>indicateur boursier</b> permettant de visualiser le cours des actions de grandes entreprises (Amazon, Apple, Facebook, Google, Microsoft) ;
-- Un <b>indicateur météolorogique</b> permettant de visualiser la météo d'une ville donnée pour aujourd'hui et les 3 jours suivants. La ville par défaut est Los Angeles ;
+- Un <b>indicateur météolorogique</b> permettant de visualiser la météo d'une ville donnée pour aujourd'hui et les 3 jours suivants. La ville par défaut est Washington DC ;
 - Un <b>indicateur épidémiologique</b> permettant de suivre quotidiennement les statistiques du Covid-19, notamment le nombre de personnes contaminées, décédées et rétablies du Coronavirus ;
 - Un <b>indicateur national</b> permettant rapidement de visualiser les principales informations d'un pays donné (Pays, Capitale, Démographie, Superficie) ;
 - Un <b>indicateur de gros titres</b> permettant de visualiser, en temps réel, les 3 informations nationales essentielles de différents journaux ;
@@ -25,9 +25,17 @@ Notre dashboard propose de nombreux contenus et vise les chefs d'entreprise ayan
 
 Le projet a été conçu en ReactJS et utilise NodeJS. Afin de permettre un lancement correct de notre projet, veuillez suivre les instructions si dessous :
 
-- Pour la partie <b>Frontend</b>, veuillez lancer votre terminal et rendez-vous dans le dossier frontend du dossier PROJECT-WEB-OCRES via la commande <i>cd</i>. Installez NodeJS en saisissant <i>npm install</i> puis lancer le navigateur internet en localhost avec <i>npm start</i> ;
+- Pour la partie <b>Frontend</b> :
+1. Veuillez lancer votre terminal ;
+2. Rendez-vous dans le dossier frontend du dossier PROJECT-WEB-OCRES via la commande <i>cd</i> ;
+3. Installez NodeJS en saisissant <i>npm install</i> ;
+4. Lancer le navigateur internet en localhost avec <i>npm start</i>.
 
-- Pour la partie <b>Backend</b>, après avoir lancé la partie frontend de notre projet, ouvrez une nouvelle fenêtre de votre terminal et rendez-vous dans le dossier backend du dossier PROJECT-WEB-OCRES via la commande <i>cd</i>. Enfin, installez NodeJS en saisissant <i>npm install</i> puis lancer le navigateur internet en localhost avec <i>npm start</i>.
+- Pour la partie <b>Backend</b> :
+1. Après avoir lancé la partie frontend de notre projet, ouvrez une nouvelle fenêtre de votre terminal ;
+2. Rendez-vous dans le dossier backend du dossier PROJECT-WEB-OCRES via la commande <i>cd</i> ;
+3. Installez NodeJS en saisissant <i>npm install</i> ;
+4. Lancer le navigateur internet en localhost avec <i>npm start</i>.
 
 ## Difficultés rencontrées
 

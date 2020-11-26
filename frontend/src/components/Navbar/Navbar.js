@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import logo from "../../image/Logo.png";
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 const Navigation = (props) => {
-    //console.log(props);
+
     return (
       <div className="Navbar">
         <Navbar>

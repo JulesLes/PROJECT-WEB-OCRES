@@ -2,15 +2,16 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1330px) {
   #mn_menu {
     display: none;
   }
 }
 
-@media screen and (min-width: 1420px) {
+@media screen and (min-width: 1330px) {
   #mn_menu {
     margin: 0;
     padding: 0;
   }
 }
+

@@ -1,0 +1,21 @@
+#btn {
+    background-color: #E53824;
+    border: none;
+}
+
+#dropdown-split-basic {
+    background-color: #E53824;
+    border: none;
+}
+
+.btn {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 30000;
+}
+
+#menu a{
+    text-decoration: none;
+    color: black;
+}
