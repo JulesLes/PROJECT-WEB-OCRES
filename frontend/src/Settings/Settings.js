@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useContext, createContext, useState, useEffect } from "react";
 import homepage  from "../image/WidgetBack.jpg";
 import Menu from '../components/Navbar/Menu';
 import NameForm from './NameForm';
@@ -10,9 +10,19 @@ import Covid19Widget from "../image/Settings/Covid19Widget.png";
 import NewsWidget from "../image/Settings/NewsWidget.png";
 import ResponsiveContainer from "react-responsive-widget";
 
+export default function Settings() {
+    
+    const [ville, setVille] = useState('Washington DC')
 
-class Settings extends Component {
-  render(){
+        const handleChange = (ville) => {
+          setVille(ville)
+          console.log(ville)
+        }
+
+        useEffect(()=> {
+          console.log(ville)
+        },[ville])
+    
     return (
         <div className="Settings" id="Settings">
 
@@ -42,7 +52,7 @@ class Settings extends Component {
                                 <div className="WeatherWidget">
                                     <img className="image" src={WeatherWidget}/>
                                     <h6>Weather Widget</h6>
-                                    <NameForm />
+                                    <NameForm setVille={setVille}/>
                                 </div>
 
                             </div>
@@ -105,7 +115,4 @@ class Settings extends Component {
 
         </div>
     );
-  }
 }
-
-export default Settings;

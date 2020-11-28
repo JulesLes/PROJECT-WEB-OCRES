@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, createContext } from "react";
 import './Settings.css';
 
 class NameForm extends React.Component {
@@ -25,11 +25,11 @@ class NameForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
             
             <label>
-                <input type="text" placeholder="Saisissez votre recherche" value={this.state.value} onChange={this.handleChange} />
+                <input type="text" placeholder="Saisissez votre recherche" onChange={this.handleChange} />
             </label>
             <br />
             
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" onClick={() => this.props.parentCallback(this.state.value)}/>
         </form>
     );
   }

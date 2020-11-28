@@ -2,7 +2,6 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 
 .Page2 {
-    height: 100%;
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,6 +19,18 @@
   #mn_menu2 {
     margin: 0;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 1330px) {
+  .Page2 {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .Page2 {
+    height: 100%;
   }
 }
 
@@ -47,7 +58,7 @@ select {
 }
 
 .Titre {
-    padding-top: 15px;
+    padding-top: 30px;
     text-align: center;
 }
 
