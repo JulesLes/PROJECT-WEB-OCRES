@@ -10,6 +10,12 @@
     min-height: 203px;
 }
 
+@media screen and (min-width: 700px) {
+  #grph2 {
+    min-height: 215px;
+  }
+}
+
 .widgetBourse:hover{
     background-color: rgba(60, 65, 219, 0.6);
 }

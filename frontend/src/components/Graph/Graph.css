@@ -7,6 +7,12 @@
   color: white;
 }
 
+@media screen and (min-width: 700px) {
+  #grph {
+    min-height: 320px;
+  }
+}
+
 .widgetGraph h5{
   font-family: 'Oswald';
   font-size: 1.5em;

@@ -25,7 +25,7 @@ const DayCard = ({ reading }) => {
             <br/>
             <h2>{Math.round(reading.temp.day)} °C </h2>
             <p class="Text">{reading.weather[0].description}</p>
-
+        
         </div>
     </div>
   )

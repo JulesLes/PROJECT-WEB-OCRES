@@ -11,18 +11,19 @@ import NewsWidget from "../image/Settings/NewsWidget.png";
 import ResponsiveContainer from "react-responsive-widget";
 
 export default function Settings() {
-    
+
     const [ville, setVille] = useState('Washington DC')
 
         const handleChange = (ville) => {
           setVille(ville)
-          console.log(ville)
+
+          //console.log(ville)
         }
 
         useEffect(()=> {
-          console.log(ville)
+          //console.log(ville)
         },[ville])
-    
+
     return (
         <div className="Settings" id="Settings">
 
@@ -31,7 +32,7 @@ export default function Settings() {
                 <Menu />
 
             </div>
-        
+
             <div className="Page2" style={{backgroundImage: `url(${homepage})` }}>
 
                 <div className="Settings">
@@ -52,7 +53,7 @@ export default function Settings() {
                                 <div className="WeatherWidget">
                                     <img className="image" src={WeatherWidget}/>
                                     <h6>Weather Widget</h6>
-                                    <NameForm setVille={setVille}/>
+                                    <NameForm parentCallback={handleChange}/>
                                 </div>
 
                             </div>
@@ -94,7 +95,7 @@ export default function Settings() {
                         </div>
 
                         <div className="app-row" style={{margin: 0, padding: 0}}>
-                            
+
                             <div className="app-col-xs-12 app-col-md-12 app-col-lg-12" style={{padding: 2}}>
 
                                 <div className="Covid19Widget">

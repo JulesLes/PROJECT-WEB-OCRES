@@ -1,38 +1,38 @@
-import React, { useContext, createContext } from "react";
+import React, { useContext, createContext, useState } from "react";
+import {Context} from '../Context';
 import './Settings.css';
 
-class NameForm extends React.Component {
-    
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
+export default (props) => {
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  const [value, setValue] = useState('')
+  const {city, setCity} = useContext(Context)
+
+  const handleChange = (event) => {
+    setValue(event.target.value)
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    alert('You have submitted : ' + this.state.value);
+  const handleSubmit = (event) => {
+    alert('You have submitted : ' + value);
     event.preventDefault();
   }
 
-  render() {
-    return (
-        <form onSubmit={this.handleSubmit}>
-            
-            <label>
-                <input type="text" placeholder="Saisissez votre recherche" onChange={this.handleChange} />
-            </label>
-            <br />
-            
-            <input type="submit" value="Submit" onClick={() => this.props.parentCallback(this.state.value)}/>
-        </form>
-    );
+  const handleClick = (event) => {
+    event.stopPropagation()
+    setCity(value)
+    console.log('Context city from name form')
+    console.log(value)
+    console.log(city)
   }
-}
 
-export default NameForm;
+  return (
+      <form onSubmit={handleSubmit}>
+
+          <label>
+              <input type="text" placeholder="Saisissez votre recherche" onChange={handleChange} />
+          </label>
+          <br />
+
+          <input type="submit" value="Submit" onClick={handleClick}/>
+      </form>
+  );
+}

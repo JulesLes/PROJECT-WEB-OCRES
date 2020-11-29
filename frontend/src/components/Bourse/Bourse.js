@@ -7,7 +7,7 @@ import './Bourse.css';
 export default class Bourse extends React.Component {
   render(){
     return (
-        <div className="widgetBourse">
+        <div className="widgetBourse" id="grph2">
             <h5>Stock Market</h5>
             <Row className="Titre">
                 <Col sm="6">

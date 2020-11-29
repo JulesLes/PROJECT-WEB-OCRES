@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { iex } from './iex.js';
 import { Container, Row, Col } from 'reactstrap';
 import './Bourse.css';
+import {IntlProvider, FormattedNumber} from 'react-intl';
 
 export default class StockRow extends Component{
     constructor(props) {
@@ -31,7 +32,10 @@ export default class StockRow extends Component{
                     <a>{this.props.ticker}</a>
                 </Col>
                 <Col sm="6">
-                    <a>{this.state.data.close}</a>
+                <IntlProvider locale='fr'>
+                  <FormattedNumber value={this.state.data.close} />
+                  <a> $</a>
+                </IntlProvider>
                 </Col>
             </Row>
         );

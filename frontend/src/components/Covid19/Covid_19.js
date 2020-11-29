@@ -5,7 +5,7 @@ import totalConfirmed  from "../../image/Covid/TotalConfirmed.png";
 import totalDeath  from "../../image/Covid/TotalDeath.png";
 import totalCovered from "../../image/Covid/TotalRecovered.png";
 import './Covid_19.css';
-
+import {IntlProvider, FormattedNumber} from 'react-intl';
 
 export default class Covid_19 extends React.Component {
 
@@ -38,25 +38,37 @@ export default class Covid_19 extends React.Component {
                     <b>New confirmed</b>
                     <br/>
                     <img className="logo" src={newConfirmed}/>
-                    <div className="number">{toDisplay['NewConfirmed']}</div>
+                    <br/>
+                    <IntlProvider locale='fr'>
+                      <FormattedNumber value={toDisplay['NewConfirmed']} />
+                    </IntlProvider>
                 </Col>
                 <Col sm="3">
                     <b>Total confirmed</b>
                     <br/>
                     <img className="logo" src={totalConfirmed}/>
-                    <div className="number">{toDisplay['TotalConfirmed']}</div>
+                    <br/>
+                    <IntlProvider locale='fr'>
+                      <FormattedNumber value={toDisplay['TotalConfirmed']} />
+                    </IntlProvider>
                 </Col>
                 <Col sm="3">
                     <b>Total deaths</b>
                     <br/>
                     <img className="logo" src={totalDeath}/>
-                    <div className="number">{toDisplay['TotalDeaths']}</div>
+                    <br/>
+                    <IntlProvider locale='fr'>
+                      <FormattedNumber value={toDisplay['TotalDeaths']} />
+                    </IntlProvider>
                 </Col>
                 <Col sm="3">
                     <b>Total recovered</b>
                     <br/>
                     <img className="logo" src={totalCovered }/>
-                    <div className="number">{toDisplay['TotalRecovered']}</div>
+                    <br/>
+                    <IntlProvider locale='fr'>
+                      <FormattedNumber value={toDisplay['TotalRecovered']} />
+                    </IntlProvider>
                 </Col>
             </Row>
 

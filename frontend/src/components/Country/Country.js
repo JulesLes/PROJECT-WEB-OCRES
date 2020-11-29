@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Country.css';
 import { Container, Row, Col } from 'reactstrap';
+import {IntlProvider, FormattedNumber} from 'react-intl';
 
 export default class Country extends Component {
   state = {
@@ -35,7 +36,10 @@ export default class Country extends Component {
                 <Col sm="4">
                     <b>Population</b>
                     <br/>
-                    <div className="number">{toDisplay['population']}</div>
+                    <IntlProvider locale='fr'>
+                      <FormattedNumber value={toDisplay['population']} />
+                    </IntlProvider>
+                    <br/>
                     <br/>
                     <b>Capital</b>
                     <br/>
@@ -55,7 +59,10 @@ export default class Country extends Component {
                     <br/>
                     <b>Area</b>
                     <br/>
-                    <div className="number">{toDisplay['area']} Km</div>
+                    <IntlProvider locale='fr'>
+                      <FormattedNumber value={toDisplay['area']} />
+                      <a> Km</a>
+                    </IntlProvider>
                 </Col>
             </Row>
 
