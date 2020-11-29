@@ -17,7 +17,8 @@ Notre projet est un dashboard regroupant <b>7 widgets différents</b> :
 - Un <b>indicateur épidémiologique</b> permettant de suivre quotidiennement les statistiques du Covid-19, notamment le nombre de personnes contaminées, décédées et rétablies du Coronavirus ;
 - Un <b>indicateur national</b> permettant rapidement de visualiser les principales informations d'un pays donné (Pays, Capitale, Démographie, Superficie) ;
 - Un <b>indicateur de gros titres</b> permettant de visualiser, en temps réel, les 3 informations nationales essentielles de différents journaux ;
-- Un <b>historique des hospitalisations</b> dûes au Covid-19 aux Etats-Unis. Ce widget reprend la librairie Recharts qui offre l'affichage de graphiques et est actualisé quotidiennement.
+- Un <b>historique des hospitalisations</b> dûes au Covid-19 aux Etats-Unis. Ce widget reprend la librairie Recharts qui offre l'affichage de graphiques et est actualisé quotidiennement ;
+- Un <b>histogramme</b> permettant de connaître le nombre d'élèves par groupe, contaminés par le Coronavirus, au sein de la majeure OCRES. Ce widget utilise notre API personnelle, MongoDB, et la librairie Recharts.
 
 Notre dashboard propose de nombreux contenus et vise les chefs d'entreprise ayant besoin de données en temps réel : les statistiques du Covid-19 peuvent influencer l'ensemble des autres widgets : un confinement pourrait changer le cours des actions ou la météo par exemple. De même, cette pandémie revient très souvent aux informations nationales et pourrait nécessiter une surveillance accrue des derniers articles parus.
 
