@@ -5,11 +5,11 @@
 .widgetNews{
     background-color: rgba(35, 35, 35, 0.6);
     border-radius: 15px;
-    max-height: 415px;
     padding: 0;
     margin: 0;
     justify-content: center;
     display: flex;
+    min-height: 415px;
 }
 
 .widgetNews:hover{
@@ -65,4 +65,9 @@
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+}
+
+.alignement {
+  display:flex;
+  justify-content: space-between;
 }

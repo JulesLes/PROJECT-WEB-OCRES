@@ -10,10 +10,10 @@ export default class Bourse extends React.Component {
         <div className="widgetBourse" id="grph2">
             <h5>Stock Market</h5>
             <Row className="Titre">
-                <Col sm="6">
+                <Col xs="6">
                     <b>Stocks</b>
                 </Col>
-                <Col sm="6">
+                <Col xs="6">
                     <b>Price</b>
                 </Col>
             </Row>

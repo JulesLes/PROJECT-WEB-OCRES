@@ -6,6 +6,7 @@ import totalDeath  from "../../image/Covid/TotalDeath.png";
 import totalCovered from "../../image/Covid/TotalRecovered.png";
 import './Covid_19.css';
 import {IntlProvider, FormattedNumber} from 'react-intl';
+import ResponsiveContainer from "react-responsive-widget";
 
 export default class Covid_19 extends React.Component {
 
@@ -33,45 +34,54 @@ export default class Covid_19 extends React.Component {
     return (
         <div className="widgetCovid">
             <h5>Covid-19</h5>
-            <Row className="Titre">
-                <Col sm="3">
-                    <b>New confirmed</b>
-                    <br/>
-                    <img className="logo" src={newConfirmed}/>
-                    <br/>
-                    <IntlProvider locale='fr'>
-                      <FormattedNumber value={toDisplay['NewConfirmed']} />
-                    </IntlProvider>
-                </Col>
-                <Col sm="3">
-                    <b>Total confirmed</b>
-                    <br/>
-                    <img className="logo" src={totalConfirmed}/>
-                    <br/>
-                    <IntlProvider locale='fr'>
-                      <FormattedNumber value={toDisplay['TotalConfirmed']} />
-                    </IntlProvider>
-                </Col>
-                <Col sm="3">
-                    <b>Total deaths</b>
-                    <br/>
-                    <img className="logo" src={totalDeath}/>
-                    <br/>
-                    <IntlProvider locale='fr'>
-                      <FormattedNumber value={toDisplay['TotalDeaths']} />
-                    </IntlProvider>
-                </Col>
-                <Col sm="3">
-                    <b>Total recovered</b>
-                    <br/>
-                    <img className="logo" src={totalCovered }/>
-                    <br/>
-                    <IntlProvider locale='fr'>
-                      <FormattedNumber value={toDisplay['TotalRecovered']} />
-                    </IntlProvider>
-                </Col>
-            </Row>
-
+            <ResponsiveContainer>
+                <Row className="Titre">
+                    <Col xs="6" sm="3">
+                        <b>New</b>
+                        <br/>
+                        <br/>
+                        <img className="logo" src={newConfirmed}/>
+                        <br/>
+                        <br/>
+                        <IntlProvider locale='fr'>
+                          <FormattedNumber value={toDisplay['NewConfirmed']} />
+                        </IntlProvider>
+                    </Col>
+                    <Col xs="6" sm="3">
+                        <b>Confirmed</b>
+                        <br/>
+                        <br/>
+                        <img className="logo" src={totalConfirmed}/>
+                        <br/>
+                        <br/>
+                        <IntlProvider locale='fr'>
+                          <FormattedNumber value={toDisplay['TotalConfirmed']} />
+                        </IntlProvider>
+                    </Col>
+                    <Col xs="6" sm="3">
+                        <b>Deaths</b>
+                        <br/>
+                        <br/>
+                        <img className="logo" src={totalDeath}/>
+                        <br/>
+                        <br/>
+                        <IntlProvider locale='fr'>
+                          <FormattedNumber value={toDisplay['TotalDeaths']} />
+                        </IntlProvider>
+                    </Col>
+                    <Col xs="6" sm="3">
+                        <b>Recovered</b>
+                        <br/>
+                        <br/>
+                        <img className="logo" src={totalCovered }/>
+                        <br/>
+                        <br/>
+                        <IntlProvider locale='fr'>
+                          <FormattedNumber value={toDisplay['TotalRecovered']} />
+                        </IntlProvider>
+                    </Col>
+                </Row>
+            </ResponsiveContainer>
         </div>
     );
   }

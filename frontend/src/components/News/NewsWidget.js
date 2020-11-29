@@ -4,30 +4,6 @@ import {useEffect, useState} from 'react';
 
 export default class NewsWidget extends Component {
 
-    // const[threeData, setThreeData] = useState([])
-    //
-    // const func = () => {
-    //   const url = `https://newsapi.org/v2/top-headlines?country=fr&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
-    //
-    //   fetch(url)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //     setThreeData(data.list)
-    //   })
-    // }
-    //
-    // const newsCard = () => {
-    //   return threeData.slice(0,3).map((reading, index) => <DayCard reading={reading} key={index} />)
-    // }
-    //
-    // return (
-    //          <div className="widget">
-    //              <a className="titre" href={newsToDisplay['url']}>{newsToDisplay['title']}</a>
-    //             <img className="image" src={newsToDisplay['urlToImage']} alt="news img"/>
-    //         </div>
-    //     );
-    //
-    // }
     state = {
         news: null,
         newsToDisplay1: '',
@@ -36,7 +12,7 @@ export default class NewsWidget extends Component {
     };
 
     componentDidMount() {
-        var url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
+        var url = `https://newsapi.org/v2/top-headlines?country=fr&category=health&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
         this.loadNews(url);
     }
 
@@ -61,21 +37,21 @@ export default class NewsWidget extends Component {
             <div className="widgetNews">
                 <div>
                   <h5>News</h5>
-                  <div className="article">
+                  <div className="article alignement">
                     <div>
                       <div className="source">{newsToDisplay1.source ? newsToDisplay1.source.name : '?'}</div>
                       <a className="titre" href={newsToDisplay1['url']}>{newsToDisplay1['title']}</a>
                     </div>
                       <img className="image" src={newsToDisplay1['urlToImage']} alt="news img"/>
                   </div>
-                  <div className="article">
+                  <div className="article alignement">
                     <div>
                       <div className="source">{newsToDisplay2.source ? newsToDisplay2.source.name : '?'}</div>
                       <a className="titre" href={newsToDisplay2['url']}>{newsToDisplay2['title']}</a>
                     </div>
                     <img className="image" src={newsToDisplay2['urlToImage']} alt="news img"/>
                   </div>
-                  <div className="article">
+                  <div className="article alignement">
                     <div>
                       <div className="source">{newsToDisplay3.source ? newsToDisplay3.source.name : '?'}</div>
                       <a className="titre" href={newsToDisplay3['url']}>{newsToDisplay3['title']}</a>

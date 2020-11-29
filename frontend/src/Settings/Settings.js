@@ -2,13 +2,18 @@ import React, { useContext, createContext, useState, useEffect } from "react";
 import homepage  from "../image/WidgetBack.jpg";
 import Menu from '../components/Navbar/Menu';
 import NameForm from './NameForm';
+import NameForm2 from './NameForm2';
+import NameForm3 from './NameForm3';
 import SelectForm from './SelectForm';
+import SelectForm2 from './SelectForm2';
+import SelectForm3 from './SelectForm3';
 import './Settings.css';
 import WeatherWidget from "../image/Settings/WeatherWidget.png";
 import CountryWidget from "../image/Settings/CountryWidget.png";
 import Covid19Widget from "../image/Settings/Covid19Widget.png";
 import NewsWidget from "../image/Settings/NewsWidget.png";
 import ResponsiveContainer from "react-responsive-widget";
+import { Container, Row, Col } from 'reactstrap';
 
 export default function Settings() {
 
@@ -23,6 +28,12 @@ export default function Settings() {
         useEffect(()=> {
           //console.log(ville)
         },[ville])
+
+        const [country, setCountry] = useState('usa')
+
+        const handleChangeCountry = (country) => {
+          setCountry(country)
+        }
 
     return (
         <div className="Settings" id="Settings">
@@ -63,7 +74,7 @@ export default function Settings() {
                                 <div className="CountryWidget">
                                     <img className="image" src={CountryWidget}/>
                                     <h6>Country Widget</h6>
-                                    <NameForm />
+                                    <NameForm parentCallback={handleChangeCountry}/>
                                 </div>
 
                             </div>
@@ -77,16 +88,16 @@ export default function Settings() {
                                 <div className="NewsWidget">
                                     <img className="image" src={NewsWidget}/>
                                     <h6>News Widget</h6>
-                                    <NameForm />
+                                    <SelectForm/>
                                 </div>
 
                             </div>
 
                             <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
 
-                                <div className="PieWidget">
+                                <div className="Covid19Widget">
                                     <img className="image" src={Covid19Widget}/>
-                                    <h6>Pie Widget</h6>
+                                    <h6>Covid-19 Widget</h6>
                                     <NameForm />
                                 </div>
 
@@ -98,10 +109,24 @@ export default function Settings() {
 
                             <div className="app-col-xs-12 app-col-md-12 app-col-lg-12" style={{padding: 2}}>
 
-                                <div className="Covid19Widget">
+                                <div className="PieWidget">
                                     <img className="image" src={Covid19Widget}/>
-                                    <h6>Covid-19 Widget</h6>
-                                    <SelectForm />
+                                    <h6>Class data</h6>
+                                    <div className="app-row" style={{margin: 0, padding: 0}}>
+
+                                        <div className="app-col-xs-6 app-col-md-6 app-col-lg-6">
+                                          <NameForm2 />
+                                          <br/>
+                                          <NameForm3 />
+                                        </div>
+
+                                        <div className="app-col-xs-6 app-col-md-6 app-col-lg-6">
+                                          <SelectForm2 />
+                                          <br/>
+                                          <SelectForm3 />
+                                        </div>
+
+                                    </div>
                                 </div>
 
                             </div>

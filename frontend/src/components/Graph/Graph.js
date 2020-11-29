@@ -3,9 +3,7 @@ import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContain
 import "./Graph.css";
 import Moment from 'react-moment';
 import {IntlProvider, FormattedNumber, FormattedDate} from 'react-intl';
-
-
-
+import moment from 'moment';
 
 const DataFormater = (number) => {
     if(number > 1000000000){
@@ -17,6 +15,10 @@ const DataFormater = (number) => {
     }else{
       return number.toString();
     }
+}
+
+const formatXAxis = (tickItem) => {
+  return moment(tickItem).format('DD MMM')
 }
 
 export default class Example extends PureComponent {
@@ -41,8 +43,7 @@ export default class Example extends PureComponent {
   }
 
   render() {
-    // const date = Date(this.state.data.date);
-    // const formattedDate = Moment(date).format("LL");
+
     return (
       <div className="widgetGraph">
           <h5>Hospitalizations due to Covid-19</h5>
@@ -50,10 +51,10 @@ export default class Example extends PureComponent {
                 <ResponsiveContainer width="95%" height={275}>
 
                       <AreaChart className="test" width={600} height={275} data={this.state.data.reverse()} margin={{ top: 10, right: 30, left: 0, bottom: 0,}}>
-                        <XAxis dataKey="date" stroke="#fff" />
+                        <XAxis dataKey="date" stroke="#fff"/>
                         <YAxis stroke="#fff" tickFormatter={DataFormater}/>
-                        <Tooltip labelFormatter={() => undefined} formatter={(okay) => [new Intl.NumberFormat('fr').format(okay), undefined]} />
-                        <Area type="monotone" dataKey="hospitalizedCurrently" stroke="#000" fill="#ffff00" />
+                        <Tooltip labelFormatter={() => undefined} formatter={(okay) => [new Intl.NumberFormat('fr').format(okay), undefined]}/>
+                        <Area type="monotone" dataKey="hospitalizedCurrently" stroke="rgba(90, 22, 14, 1)" fill="#E53824" />
                       </AreaChart>
 
                 </ResponsiveContainer>

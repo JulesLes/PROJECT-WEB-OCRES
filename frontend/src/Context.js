@@ -7,10 +7,14 @@ export default ({
 }) => {
   const [city, setCity] = useState('Washington DC')
 
+  const [country, setCountry] = useState('usa')
+
   return (
       <Context.Provider value = {{
         city: city,
-        setCity: setCity
+        setCity: setCity,
+        country: country,
+        setCountry: setCountry,
       }}>
       {children}
       </Context.Provider>

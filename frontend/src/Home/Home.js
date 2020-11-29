@@ -45,10 +45,10 @@ export default function Home() {
             <ResponsiveContainer xs="450" md="700" lg="1300">
                 <div className="app-row" style={{margin: 0, padding: 0}}>
 
-                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 2}}><Graph /></div>
-                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 2}}><Covid_19/></div>
-                    <div className="app-col-xs-12 app-col-md-6 app-col-lg-3" style={{padding: 2}}><Bourse /></div>
-                    <div className="app-col-xs-12 app-col-md-6 app-col-lg-3" style={{padding: 2}}><Country /></div>
+                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 4}}><Graph /></div>
+                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 4}}><Covid_19/></div>
+                    <div className="app-col-xs-12 app-col-md-6 app-col-lg-3" style={{padding: 4}}><Bourse /></div>
+                    <div className="app-col-xs-12 app-col-md-6 app-col-lg-3" style={{padding: 4}}><Country /></div>
 
                 </div>
 
@@ -58,9 +58,9 @@ export default function Home() {
 
                 <div className="app-row2" style={{margin: 0, padding: 0}}>
 
-                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 2}}><SemaineContainer ville={city}/></div>
-                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 2}}><NewsWidget/></div>
-                    
+                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-5" style={{padding: 4}}><SemaineContainer ville={city}/></div>
+                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-5" style={{padding: 4}}><NewsWidget/></div>
+                    <div className="app-col-xs-12 app-col-md-12 app-col-lg-2" style={{padding: 4}}><Graph2/></div>
                 </div>
 
             </ResponsiveContainer>

@@ -11,7 +11,7 @@ export default (props) => {
   const func = () => {
     const API_URL = "https://api.openweathermap.org/data/2.5/forecast/daily";
     const API_KEY = "4081444b7b90198136fefe6ed4ccf35b";
-    const weatherURL = `${API_URL}?q=${props.ville}&cnt=4&units=metric&appid=${API_KEY}`
+    const weatherURL = `${API_URL}?q=${props.ville}&cnt=3&units=metric&appid=${API_KEY}`
 
     fetch(weatherURL)
       .then(res => res.json())

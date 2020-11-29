@@ -5,6 +5,7 @@
   background-color: rgba(35, 35, 35, 0.6);
   border-radius: 15px;
   color: white;
+  min-height: 428px;
 }
 
 @media screen and (min-width: 700px) {
@@ -19,6 +20,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  font-weight: bold;
 }
 
 .graph {

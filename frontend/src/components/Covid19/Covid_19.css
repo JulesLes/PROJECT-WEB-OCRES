@@ -12,6 +12,7 @@
     color:white;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .widgetCovid h5{
@@ -20,6 +21,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  font-weight: bold;
 }
 
 .Titre {

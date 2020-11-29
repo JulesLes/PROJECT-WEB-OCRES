@@ -81,3 +81,9 @@ h6 {
     margin: 0;
     padding: 0;
 }
+
+.info{
+  color: white;
+  font-family: 'Oswald';
+  padding-right: 1em;
+}

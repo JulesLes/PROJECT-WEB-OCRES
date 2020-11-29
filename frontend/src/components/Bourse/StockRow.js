@@ -28,10 +28,10 @@ export default class StockRow extends Component{
     render() {
         return (
             <Row className="Lignes">
-                <Col sm="6">
+                <Col xs="6">
                     <a>{this.props.ticker}</a>
                 </Col>
-                <Col sm="6">
+                <Col xs="6">
                 <IntlProvider locale='fr'>
                   <FormattedNumber value={this.state.data.close} />
                   <a> $</a>

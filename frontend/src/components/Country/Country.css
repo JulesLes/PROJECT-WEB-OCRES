@@ -17,6 +17,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  font-weight: bold;
 }
 
 .Titre {
@@ -30,4 +31,12 @@
 
 .widgetCountry:hover{
     background-color: rgba(60, 65, 219, 0.6);
+}
+
+.image {
+    margin: 8px 2px 8px 2px;
+    object-fit: cover;
+    width: 5em;
+    height: 5em;
+    border-radius: 15px;
 }

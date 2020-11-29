@@ -7,6 +7,8 @@ export default (props) => {
   const [value, setValue] = useState('')
   const {city, setCity} = useContext(Context)
 
+  const {country, setCountry} = useContext(Context)
+
   const handleChange = (event) => {
     setValue(event.target.value)
   }
@@ -19,9 +21,8 @@ export default (props) => {
   const handleClick = (event) => {
     event.stopPropagation()
     setCity(value)
-    console.log('Context city from name form')
     console.log(value)
-    console.log(city)
+    console.log(country)
   }
 
   return (

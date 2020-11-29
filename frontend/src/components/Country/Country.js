@@ -33,7 +33,7 @@ export default class Country extends Component {
         <div className="widgetCountry">
             <h5>Country data</h5>
             <Row className="Titre">
-                <Col sm="4">
+                <Col xs="4">
                     <b>Population</b>
                     <br/>
                     <IntlProvider locale='fr'>
@@ -46,13 +46,13 @@ export default class Country extends Component {
                     <div className="number">{toDisplay['capital']}</div>
 
                 </Col>
-                <Col sm="4">
+                <Col xs="4">
                     <b>Flag</b>
                     <br/>
                     <img className="image" src={toDisplay['flag']} alt="news img"/>
                     <br/>
                 </Col>
-                <Col sm="4">
+                <Col xs="4">
                     <b>Region</b>
                     <br/>
                     <div className="number">{toDisplay['region']}</div>
