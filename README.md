@@ -2,7 +2,7 @@
 
 ![picture](frontend/src/image/Logo.png)
 
-Ce README présente les membres de l'équipe projet, la description du projet réalisé, la documentation permettant le lancement du projet, les quelques difficultés rencontrées et le lien de notre Trello permettant la répartition du travail :
+Ce README présente les membres de l'équipe projet, la description du projet réalisé, la documentation permettant le lancement du projet, les quelques difficultés rencontrées, le lien de notre Trello permettant la répartition du travail et une démonstration du projet :
 
 ## Membres de l'équipe projet
 
@@ -54,3 +54,6 @@ Un projet réussi est structuré et organisé de façon à répartir les différ
  <a href="https://trello.com/b/Hjukhlm3/widgy">Trello de Widgy</a>
 </p>
 
+## Démonstration du projet
+
+![Widgy Demo](frontend/src/image/widgy.gif)
