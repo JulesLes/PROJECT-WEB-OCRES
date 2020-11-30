@@ -1,0 +1,22 @@
+.Footer {
+  display: flex;
+  background-color: #E53824;
+  width: 100%;
+  height: 30px;
+  z-index: 10000;
+  top: 1em;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Roboto';
+  color: white;
+  font-size: 10px;
+}
+
+.Logo{
+  width: 70px;
+  height: 35px;
+}

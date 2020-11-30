@@ -114,13 +114,15 @@ export default function Settings() {
                                     <h6>Class data</h6>
                                     <div className="app-row" style={{margin: 0, padding: 0}}>
 
-                                        <div className="app-col-xs-6 app-col-md-6 app-col-lg-6">
+                                        <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
+                                          <br/>
                                           <NameForm2 />
                                           <br/>
                                           <NameForm3 />
                                         </div>
 
-                                        <div className="app-col-xs-6 app-col-md-6 app-col-lg-6">
+                                        <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
+                                          <br/>
                                           <SelectForm2 />
                                           <br/>
                                           <SelectForm3 />

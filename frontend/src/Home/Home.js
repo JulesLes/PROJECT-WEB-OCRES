@@ -15,6 +15,7 @@ import Graph2 from '../components/Graph2/Graph2.js'
 import ResponsiveContainer from "react-responsive-widget";
 import Menu from '../components/Navbar/Menu';
 import {Context} from '../Context'
+import Footer from '../components/Footer/Footer';
 
 
 
@@ -66,6 +67,7 @@ export default function Home() {
             </ResponsiveContainer>
 
         </div>
+        <Footer/>
     </div>
     );
 }

@@ -2,11 +2,12 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 
 .Page2 {
-    width: 100vw;
+    padding-bottom: 10px;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    padding-bottom: 10px;
 }
 
 @media screen and (min-width: 1330px) {
@@ -22,15 +23,9 @@
   }
 }
 
-@media screen and (min-width: 1330px) {
+@media screen and (min-width: 700px) {
   .Page2 {
     height: 100vh;
-  }
-}
-
-@media screen and (max-width: 1330px) {
-  .Page2 {
-    height: 100%;
   }
 }
 
@@ -67,9 +62,10 @@ h6 {
     font-family: 'Oswald';
 }
 
-.image {
-    width: 50px;
-    height: 50px;
+.imageSet {
+    margin-top: 15px;
+    width: 78px;
+    height: 78px;
 }
 
 .WeatherWidget, .CountryWidget, .Covid19Widget, .PieWidget, .NewsWidget {
