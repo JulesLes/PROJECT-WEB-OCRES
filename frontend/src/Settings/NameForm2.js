@@ -30,7 +30,6 @@ export default (props) => {
           <label>
               <input type="text" placeholder="Saisissez votre recherche" onChange={handleChange} />
           </label>
-          <input type="submit" value="Submit" onClick={handleClick}/>
       </form>
   );
 }

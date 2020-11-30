@@ -34,7 +34,6 @@ class SelectForm2 extends React.Component {
             <option value="4B">4B</option>
           </select>
         </label>
-        <input type="submit" value="Submit" />
       </form>
     );
   }

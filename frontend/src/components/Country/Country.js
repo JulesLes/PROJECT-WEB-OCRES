@@ -61,7 +61,7 @@ export default class Country extends Component {
                     <br/>
                     <IntlProvider locale='fr'>
                       <FormattedNumber value={toDisplay['area']} />
-                      <a> Km</a>
+                      <b> Km</b>
                     </IntlProvider>
                 </Col>
             </Row>
