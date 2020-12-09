@@ -12,7 +12,7 @@ export default class NewsWidget extends Component {
     };
 
     componentDidMount() {
-        var url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
+        var url = `https://newsapi.org/v2/top-headlines?country=${this.props.paysNews}&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
         this.loadNews(url);
     }
 

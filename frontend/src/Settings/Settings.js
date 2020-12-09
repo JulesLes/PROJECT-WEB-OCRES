@@ -2,39 +2,50 @@ import React, { useContext, createContext, useState, useEffect } from "react";
 import homepage  from "../image/WidgetBack.jpg";
 import Menu from '../components/Navbar/Menu';
 import NameForm from './NameForm';
-import NameForm2 from './NameForm2';
-import NameForm3 from './NameForm3';
+import FirstName from './FirstName';
+import LastName from './LastName';
 import SelectForm from './SelectForm';
 import SelectForm2 from './SelectForm2';
 import SelectForm3 from './SelectForm3';
+import SelectFormCovid from './SelectFormCovid';
 import './Settings.css';
 import WeatherWidget from "../image/Settings/WeatherWidget.png";
 import CountryWidget from "../image/Settings/CountryWidget.png";
 import Covid19Widget from "../image/Settings/Covid19Widget.png";
 import NewsWidget from "../image/Settings/NewsWidget.png";
 import ResponsiveContainer from "react-responsive-widget";
+import CountryForm from './CountryForm';
 import { Container, Row, Col } from 'reactstrap';
 
-export default function Settings() {
+export default class Settings extends React.Component {
 
-    const [ville, setVille] = useState('Washington DC')
+    // const [ville, setVille] = useState('Washington DC')
+    //
+    //     const handleChange = (ville) => {
+    //       setVille(ville)
+    //
+    //       //console.log(ville)
+    //     }
+    //
+    //     useEffect(()=> {
+    //       //console.log(ville)
+    //     },[ville])
+    //
+    //     const [country, setCountry] = useState('usa')
+    //
+    //     const handleChangeCountry = (country) => {
+    //       setCountry(country)
+    //     }
 
-        const handleChange = (ville) => {
-          setVille(ville)
+    constructor(props){
+      super(props);
+      this.state = {
 
-          //console.log(ville)
-        }
+      }
+    }
 
-        useEffect(()=> {
-          //console.log(ville)
-        },[ville])
 
-        const [country, setCountry] = useState('usa')
-
-        const handleChangeCountry = (country) => {
-          setCountry(country)
-        }
-
+render(){
     return (
         <div className="Settings" id="Settings">
 
@@ -64,7 +75,7 @@ export default function Settings() {
                                 <div className="WeatherWidget">
                                     <img className="image" src={WeatherWidget}/>
                                     <h6>Weather Widget</h6>
-                                    <NameForm parentCallback={handleChange}/>
+                                  <NameForm parentCallback={this.props.cityChange}/>
                                 </div>
 
                             </div>
@@ -74,7 +85,7 @@ export default function Settings() {
                                 <div className="CountryWidget">
                                     <img className="image" src={CountryWidget}/>
                                     <h6>Country Widget</h6>
-                                    <NameForm parentCallback={handleChangeCountry}/>
+                                    <CountryForm parentCallback={this.props.countryChange}/>
                                 </div>
 
                             </div>
@@ -88,7 +99,7 @@ export default function Settings() {
                                 <div className="NewsWidget">
                                     <img className="image" src={NewsWidget}/>
                                     <h6>News Widget</h6>
-                                    <SelectForm/>
+                                    <SelectForm parentCallback={this.props.newsChange}/>
                                 </div>
 
                             </div>
@@ -98,7 +109,8 @@ export default function Settings() {
                                 <div className="Covid19Widget">
                                     <img className="image" src={Covid19Widget}/>
                                     <h6>Covid-19 Widget</h6>
-                                    <NameForm />
+                                    <SelectFormCovid parentCallback={this.props.covidChange}/>
+                                    }
                                 </div>
 
                             </div>
@@ -116,9 +128,9 @@ export default function Settings() {
 
                                         <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
                                           <br/>
-                                          <NameForm2 />
+                                          <FirstName />
                                           <br/>
-                                          <NameForm3 />
+                                          <LastName />
                                         </div>
 
                                         <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
@@ -143,4 +155,5 @@ export default function Settings() {
 
         </div>
     );
+}
 }

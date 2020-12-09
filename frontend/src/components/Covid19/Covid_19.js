@@ -25,7 +25,7 @@ export default class Covid_19 extends React.Component {
           .then(response => response.json())
           .then(data => {
               this.setState({Country: data});
-              this.setState({toDisplay: data['Countries'][181]})//59 France 181 USA
+              this.setState({toDisplay: data['Countries'][this.props.paysCovid]})//59 France 181 USA
           });
   }
 
