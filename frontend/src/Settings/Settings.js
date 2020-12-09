@@ -1,41 +1,23 @@
 import React, { useContext, createContext, useState, useEffect } from "react";
 import homepage  from "../image/WidgetBack.jpg";
 import Menu from '../components/Navbar/Menu';
-import NameForm from './NameForm';
-import FirstName from './FirstName';
-import LastName from './LastName';
-import SelectForm from './SelectForm';
-import SelectForm2 from './SelectForm2';
-import SelectForm3 from './SelectForm3';
-import SelectFormCovid from './SelectFormCovid';
+import NameForm from './SearchBars/NameForm';
+import FirstName from './SearchBars/FirstName';
+import LastName from './SearchBars/LastName';
+import SelectFormNews from './SearchBars/SelectFormNews';
+import SelectForm2 from './SearchBars/SelectForm2';
+import SelectForm3 from './SearchBars/SelectForm3';
+import SelectFormCovid from './SearchBars/SelectFormCovid';
 import './Settings.css';
 import WeatherWidget from "../image/Settings/WeatherWidget.png";
 import CountryWidget from "../image/Settings/CountryWidget.png";
 import Covid19Widget from "../image/Settings/Covid19Widget.png";
 import NewsWidget from "../image/Settings/NewsWidget.png";
 import ResponsiveContainer from "react-responsive-widget";
-import CountryForm from './CountryForm';
+import CountryForm from './SearchBars/CountryForm';
 import { Container, Row, Col } from 'reactstrap';
 
 export default class Settings extends React.Component {
-
-    // const [ville, setVille] = useState('Washington DC')
-    //
-    //     const handleChange = (ville) => {
-    //       setVille(ville)
-    //
-    //       //console.log(ville)
-    //     }
-    //
-    //     useEffect(()=> {
-    //       //console.log(ville)
-    //     },[ville])
-    //
-    //     const [country, setCountry] = useState('usa')
-    //
-    //     const handleChangeCountry = (country) => {
-    //       setCountry(country)
-    //     }
 
     constructor(props){
       super(props);
@@ -43,7 +25,6 @@ export default class Settings extends React.Component {
 
       }
     }
-
 
 render(){
     return (
@@ -99,7 +80,7 @@ render(){
                                 <div className="NewsWidget">
                                     <img className="image" src={NewsWidget}/>
                                     <h6>News Widget</h6>
-                                    <SelectForm parentCallback={this.props.newsChange}/>
+                                    <SelectFormNews parentCallback={this.props.newsChange}/>
                                 </div>
 
                             </div>
@@ -110,7 +91,6 @@ render(){
                                     <img className="image" src={Covid19Widget}/>
                                     <h6>Covid-19 Widget</h6>
                                     <SelectFormCovid parentCallback={this.props.covidChange}/>
-                                    }
                                 </div>
 
                             </div>
@@ -128,9 +108,9 @@ render(){
 
                                         <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
                                           <br/>
-                                          <FirstName />
+                                          {/*<FirstName />*/}
                                           <br/>
-                                          <LastName />
+                                          {/*<LastName />*/}
                                         </div>
 
                                         <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
