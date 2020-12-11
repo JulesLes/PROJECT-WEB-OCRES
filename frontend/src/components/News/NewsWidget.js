@@ -11,6 +11,7 @@ export default class NewsWidget extends Component {
         newsToDisplay3: ''
     };
 
+   //Permet le chargement des données de l'API
     componentDidMount() {
         var url = `https://newsapi.org/v2/top-headlines?country=${this.props.paysNews}&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
         this.loadNews(url);
@@ -30,6 +31,8 @@ export default class NewsWidget extends Component {
 
 
     render() {
+        
+        {/*Affichage des 3ères données de l'API*/}
         const {newsToDisplay1} = this.state;
         const {newsToDisplay2} = this.state;
         const {newsToDisplay3} = this.state;

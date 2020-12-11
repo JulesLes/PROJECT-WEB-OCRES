@@ -33,6 +33,8 @@ export default (props) => {
         <h5>{props.ville} weather forecast</h5>
         <br/>
             <div className="row justify-content-center">
+              
+              {/*Appel de Daycard.js*/}
               {formatDayCards()}
             </div>
     </div>

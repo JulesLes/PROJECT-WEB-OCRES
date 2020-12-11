@@ -12,6 +12,7 @@ export default class StockRow extends Component{
         }
     }
 
+    //Permet le chargement des données de l'API
     componentDidMount() {
         const url =
         `${iex.base_url}/stock/${this.props.ticker}/intraday-prices?chartLast=1&token=${iex.api_token}`
@@ -32,6 +33,8 @@ export default class StockRow extends Component{
                     <a>{this.props.ticker}</a>
                 </Col>
                 <Col xs="6">
+                
+                {/*Affichage des données avec séparation des nombres*/}
                 <IntlProvider locale='fr'>
                   <FormattedNumber value={this.state.data.close} />
                   <a> $</a>

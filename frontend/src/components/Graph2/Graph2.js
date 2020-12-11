@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { PureComponent } from 'react';
 import {ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,} from 'recharts';
 import './Graph2.css';
@@ -16,7 +17,7 @@ const DataFormater = (number) => {
 
 const data = [
   {
-    name: '2A', CF: 5, NC: 17, amt: 2400,
+    name: '2A', CF: 54, NC: 12, amt: 2400,
   },
   {
     name: '2B', CF: 8, NC: 12, amt: 2210,
@@ -33,6 +34,37 @@ const data = [
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/q4eonc12/';
 
+  state = {
+      data:[],
+      mapDatas: new Map()
+      //{'TD3', [1,6]}
+    
+  };
+
+  componentDidMount() {
+      console.log('jsuis passé')
+      var url = 'http://localhost:3000/api/';
+      this.loadNews(url);
+  }
+
+
+loadNews(url) {
+      axios.get(url)
+          .then(response => {console.log(response)})
+          .then(res => {
+              this.setState({data: res});
+          });
+      
+      this.state.data.forEach((elem)=>{
+          this.state.mapDatas.has(elem.groupe)?
+              elem.etat?this.state.mapDatas.get(elem.groupe)[0]++:this.state.mapDatas.get(elem.groupe)[1]++
+          :
+          elem.etat?this.state.mapDatas.set(elem.groupe,[1,0]):this.state.mapDatas.set(elem.groupe,[0,1])
+      })
+      for(const key of this.state.mapDatas.keys()){console.log(key)}
+  }
+
+//insertNewStudent() {}
   render() {
     return (
       <div className="widgetGraph2">

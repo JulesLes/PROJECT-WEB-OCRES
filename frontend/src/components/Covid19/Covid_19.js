@@ -15,6 +15,7 @@ export default class Covid_19 extends React.Component {
       toDisplay: ''
   };
 
+  //Permet le chargement des données de l'API
   componentDidMount() {
       var url = `https://api.covid19api.com/summary`;
       this.loadNews(url);
@@ -37,6 +38,8 @@ export default class Covid_19 extends React.Component {
             <ResponsiveContainer>
                 <Row className="Titre">
                     <Col xs="6" sm="3">
+        
+                        {/*Affichage des nouveaux cas*/}
                         <b>New</b>
                         <br/>
                         <br/>
@@ -47,7 +50,10 @@ export default class Covid_19 extends React.Component {
                           <FormattedNumber value={toDisplay['NewConfirmed']} />
                         </IntlProvider>
                     </Col>
+        
                     <Col xs="6" sm="3">
+                        
+                        {/*Affichage des cas confirmés total*/}
                         <b>Confirmed</b>
                         <br/>
                         <br/>
@@ -58,7 +64,10 @@ export default class Covid_19 extends React.Component {
                           <FormattedNumber value={toDisplay['TotalConfirmed']} />
                         </IntlProvider>
                     </Col>
-                    <Col xs="6" sm="3">
+                    
+                        <Col xs="6" sm="3">
+        
+                        {/*Affichage des personnes décédées*/}
                         <b>Deaths</b>
                         <br/>
                         <br/>
@@ -69,7 +78,10 @@ export default class Covid_19 extends React.Component {
                           <FormattedNumber value={toDisplay['TotalDeaths']} />
                         </IntlProvider>
                     </Col>
+        
                     <Col xs="6" sm="3">
+                
+                        {/*Affichage des personnes guéries*/}
                         <b>Recovered</b>
                         <br/>
                         <br/>

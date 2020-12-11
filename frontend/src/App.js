@@ -9,6 +9,7 @@ import Settings from './Settings/Settings';
 
 class App extends React.Component{
 
+//Initialisation des valeurs au démarrage de la page Web
 constructor(props){
   super(props);
   this.state = {
@@ -18,7 +19,8 @@ constructor(props){
     countryCovid: '182',
   }
 }
-
+    
+//Update des valeurs depuis la page Settings
 updateState = (e) => { //Country
   this.setState({
     countrySearch: e
@@ -51,6 +53,8 @@ render(){
             <div className="navbar" id="mn_menu">
                 <Navigation />
             </div>
+      
+            {/*Permet à la NavBar de changer de page*/}
             <Switch>
 
                 <Route path='/Settings'>

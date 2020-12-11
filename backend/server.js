@@ -7,7 +7,8 @@ var express = require('express'),
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/CovidECE');
+mongoose.connect('mongodb+srv://username:passwordpassword@cluster0.us7rj.mongodb.net/test?retryWrites=true&w=majority');
+
 var CovidSchema = mongoose.Schema({
     nom: String,
     prenom: String,

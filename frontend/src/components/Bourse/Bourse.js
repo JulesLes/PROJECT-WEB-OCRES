@@ -8,6 +8,8 @@ export default class Bourse extends React.Component {
   render(){
     return (
         <div className="widgetBourse" id="grph2">
+            
+            {/*Titre du Widget*/}
             <h5>Stock Market</h5>
             <Row className="Titre">
                 <Col xs="6">
@@ -18,6 +20,7 @@ export default class Bourse extends React.Component {
                 </Col>
             </Row>
 
+            {/*Tableau d'actions*/}
             <StockRow ticker="goog" />
             <StockRow ticker="aapl" />
             <StockRow ticker="fb" />

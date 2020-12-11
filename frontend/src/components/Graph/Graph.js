@@ -28,6 +28,7 @@ export default class Example extends PureComponent {
       data:[]
   };
 
+  //Permet le chargement des données de l'API
   componentDidMount() {
       var url = `https://api.covidtracking.com/v1/us/daily.json`;
       this.loadNews(url);
@@ -50,6 +51,7 @@ export default class Example extends PureComponent {
             <div className="graph" id="grph">
                 <ResponsiveContainer width="95%" height={275}>
 
+                      {/*Affichage des données avec Recharts*/}
                       <AreaChart className="test" width={600} height={275} data={this.state.data.reverse()} margin={{ top: 10, right: 30, left: 0, bottom: 0,}}>
                         <XAxis dataKey="date" stroke="#fff"/>
                         <YAxis stroke="#fff" tickFormatter={DataFormater}/>

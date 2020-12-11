@@ -26,114 +26,114 @@ export default class Settings extends React.Component {
       }
     }
 
-render(){
-    return (
-        <div className="Settings" id="Settings">
+    render(){
+        return (
+            <div className="Settings" id="Settings">
 
-            <div className="navbar" id="mn_menu2">
+                <div className="navbar" id="mn_menu2">
 
-                <Menu />
+                    <Menu />
 
-            </div>
+                </div>
 
-            <div className="Page2" style={{backgroundImage: `url(${homepage})` }}>
+                <div className="Page2" style={{backgroundImage: `url(${homepage})` }}>
 
-                <div className="Settings">
+                    <div className="Settings">
 
-                    <div className="Titre">
+                        <div className="Titre">
 
-                        <h1 className="Title">Settings</h1>
-
-                    </div>
-
-                    <ResponsiveContainer xs="450" md="700" lg="1300">
-
-                        <div className="app-row" style={{margin: 0, padding: 0}}>
-
-
-                            <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
-
-                                <div className="WeatherWidget">
-                                    <img className="image" src={WeatherWidget}/>
-                                    <h6>Weather Widget</h6>
-                                  <NameForm parentCallback={this.props.cityChange}/>
-                                </div>
-
-                            </div>
-
-                            <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
-
-                                <div className="CountryWidget">
-                                    <img className="image" src={CountryWidget}/>
-                                    <h6>Country Widget</h6>
-                                    <CountryForm parentCallback={this.props.countryChange}/>
-                                </div>
-
-                            </div>
+                            <h1 className="Title">Settings</h1>
 
                         </div>
 
-                        <div className="app-row" style={{margin: 0, padding: 0}}>
+                        <ResponsiveContainer xs="450" md="700" lg="1300">
 
-                            <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
+                            <div className="app-row" style={{margin: 0, padding: 0}}>
 
-                                <div className="NewsWidget">
-                                    <img className="image" src={NewsWidget}/>
-                                    <h6>News Widget</h6>
-                                    <SelectFormNews parentCallback={this.props.newsChange}/>
-                                </div>
 
-                            </div>
+                                <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
 
-                            <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
-
-                                <div className="Covid19Widget">
-                                    <img className="image" src={Covid19Widget}/>
-                                    <h6>Covid-19 Widget</h6>
-                                    <SelectFormCovid parentCallback={this.props.covidChange}/>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div className="app-row" style={{margin: 0, padding: 0}}>
-
-                            <div className="app-col-xs-12 app-col-md-12 app-col-lg-12" style={{padding: 2}}>
-
-                                <div className="PieWidget">
-                                    <img className="image" src={Covid19Widget}/>
-                                    <h6>Class data</h6>
-                                    <div className="app-row" style={{margin: 0, padding: 0}}>
-
-                                        <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
-                                          <br/>
-                                          {/*<FirstName />*/}
-                                          <br/>
-                                          {/*<LastName />*/}
-                                        </div>
-
-                                        <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
-                                          <br/>
-                                          <SelectForm2 />
-                                          <br/>
-                                          <SelectForm3 />
-                                        </div>
-
+                                    <div className="WeatherWidget">
+                                        <img className="image" src={WeatherWidget}/>
+                                        <h6>Weather Widget</h6>
+                                      <NameForm parentCallback={this.props.cityChange}/>
                                     </div>
+
+                                </div>
+
+                                <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
+
+                                    <div className="CountryWidget">
+                                        <img className="image" src={CountryWidget}/>
+                                        <h6>Country Widget</h6>
+                                        <CountryForm parentCallback={this.props.countryChange}/>
+                                    </div>
+
                                 </div>
 
                             </div>
 
-                        </div>
+                            <div className="app-row" style={{margin: 0, padding: 0}}>
 
-                    </ResponsiveContainer>
+                                <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
 
-                 </div>
+                                    <div className="NewsWidget">
+                                        <img className="image" src={NewsWidget}/>
+                                        <h6>News Widget</h6>
+                                        <SelectFormNews parentCallback={this.props.newsChange}/>
+                                    </div>
+
+                                </div>
+
+                                <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
+
+                                    <div className="Covid19Widget">
+                                        <img className="image" src={Covid19Widget}/>
+                                        <h6>Covid-19 Widget</h6>
+                                        <SelectFormCovid parentCallback={this.props.covidChange}/>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="app-row" style={{margin: 0, padding: 0}}>
+
+                                <div className="app-col-xs-12 app-col-md-12 app-col-lg-12" style={{padding: 2}}>
+
+                                    <div className="PieWidget">
+                                        <img className="image" src={Covid19Widget}/>
+                                        <h6>Class data</h6>
+                                        <div className="app-row" style={{margin: 0, padding: 0}}>
+
+                                            <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
+                                              <br/>
+                                              {/*<FirstName />*/}
+                                              <br/>
+                                              {/*<LastName />*/}
+                                            </div>
+
+                                            <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
+                                              <br/>
+                                              <SelectForm2 />
+                                              <br/>
+                                              <SelectForm3 />
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </ResponsiveContainer>
+
+                     </div>
+
+                </div>
 
             </div>
-
-        </div>
-    );
-}
+        );
+    }
 }
