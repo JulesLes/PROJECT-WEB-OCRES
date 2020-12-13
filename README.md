@@ -18,7 +18,7 @@ Notre projet est un dashboard regroupant <b>7 widgets différents</b> :
 - Un <b>indicateur national</b> permettant rapidement de visualiser les principales informations d'un pays donné (Pays, Capitale, Démographie, Superficie) ;
 - Un <b>indicateur de gros titres</b> permettant de visualiser, en temps réel, les 3 informations nationales essentielles de différents journaux ;
 - Un <b>historique des hospitalisations</b> dûes au Covid-19 aux Etats-Unis. Ce widget reprend la librairie Recharts qui offre l'affichage de graphiques et est actualisé quotidiennement ;
-- Un <b>histogramme</b> permettant de connaître le nombre d'élèves par groupe, contaminés par le Coronavirus, au sein de la majeure OCRES. Ce widget utilise notre API personnelle, MongoDB, et la librairie Recharts.
+- Un <b>diagramme</b> permettant de connaître le nombre d'élèves, contaminés par le Coronavirus, au sein de la majeure OCRES. Ce widget utilise notre API personnelle, MongoDB, et la librairie Recharts.
 
 Notre dashboard propose de nombreux contenus et vise les chefs d'entreprise ayant besoin de données en temps réel : les statistiques du Covid-19 peuvent influencer l'ensemble des autres widgets : un confinement pourrait changer le cours des actions ou la météo par exemple. De même, cette pandémie revient très souvent aux informations nationales et pourrait nécessiter une surveillance accrue des derniers articles parus.
 
@@ -26,15 +26,20 @@ Notre dashboard propose de nombreux contenus et vise les chefs d'entreprise ayan
 
 Le projet a été conçu en ReactJS et utilise NodeJS. Afin de permettre un lancement correct de notre projet, veuillez suivre les instructions si dessous :
 
-- Pour la partie <b>Frontend</b> :
-1. Veuillez lancer votre terminal ;
-2. Rendez-vous dans le dossier frontend du dossier PROJECT-WEB-OCRES via la commande <i>cd</i> ;
-3. Installez NodeJS en saisissant <i>npm install</i> ;
-4. Lancer le navigateur internet en localhost avec <i>npm start</i>.
-
 - Pour la partie <b>Backend</b> :
-1. Après avoir lancé la partie frontend de notre projet, ouvrez une nouvelle fenêtre de votre terminal ;
-2. Rendez-vous dans le dossier backend du dossier PROJECT-WEB-OCRES via la commande <i>cd</i> ;
+0. <b>Prérequis</b> : Installation et mise en marche (ON/OFF) de l'extension CORS sur Google Chrome (via le lien suivant : <i>https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=fr</i>) ;
+1. Rendez-vous sur MongoDB Atlas ;
+2. Une fois connecté, créer votre BDD, en appuyant sur Create New Cluster ;
+3. Après la création, reliez à MongoDB Compass en y collant votre lien nouvellement créé ;
+4. Ajoutez ce lien dans le fichier Server.js à la ligne 13 ;
+5. Veuillez lancer votre terminal ;
+6. Rendez-vous dans le dossier backend du dossier PROJECT-WEB-OCRES via la commande <i>cd</i> ;
+7. Lancez le serveur en saisissant la commande <i>node server.js</i>;
+8. Vérifiez l'accès à votre API ;
+
+- Pour la partie <b>Frontend</b> :
+1. Après avoir lancé la partie backend de notre projet, ouvrez une nouvelle fenêtre de votre terminal ;
+2. Rendez-vous dans le dossier frontend du dossier PROJECT-WEB-OCRES via la commande <i>cd</i> ;
 3. Installez NodeJS en saisissant <i>npm install</i> ;
 4. Lancer le navigateur internet en localhost avec <i>npm start</i>.
 
@@ -48,7 +53,7 @@ Une fois cette étape réalisée, les tâches suivantes ont été plus simple et
 
 ## Répartition du travail
 
-Un projet réussi est structuré et organisé de façon à répartir les différentes tâches à réaliser entre les différents membres. Afin de visualiser l'ensemble du travail effectué et la répartition des tâches entre membres de l'équipe projet, rendez-vous sur le <b>Trello de Widgy</b> ci-joint : 
+Un projet réussi est structuré et organisé de façon à répartir les différentes tâches à réaliser entre les différents membres. Afin de visualiser l'ensemble du travail effectué et la répartition des tâches entre membres de l'équipe projet, rendez-vous sur le <b>Trello de Widgy</b> ci-joint :
 
 <p align="center">
  <a href="https://trello.com/b/Hjukhlm3/widgy">Trello de Widgy</a>
