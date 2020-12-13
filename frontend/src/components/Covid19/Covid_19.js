@@ -15,12 +15,13 @@ export default class Covid_19 extends React.Component {
       toDisplay: ''
   };
 
-  //Permet le chargement des données de l'API
+  //Appel le chargement des données de l'API
   componentDidMount() {
       var url = `https://api.covid19api.com/summary`;
       this.loadNews(url);
   }
 
+  //Permet le chargement des données de l'API
   loadNews(url) {
       fetch(url)
           .then(response => response.json())
@@ -34,11 +35,12 @@ export default class Covid_19 extends React.Component {
     const {toDisplay} = this.state;
     return (
         <div className="widgetCovid">
+            {/*Affichage du Titre*/}
             <h5>Covid-19</h5>
             <ResponsiveContainer>
                 <Row className="Titre">
                     <Col xs="6" sm="3">
-        
+
                         {/*Affichage des nouveaux cas*/}
                         <b>New</b>
                         <br/>
@@ -46,13 +48,15 @@ export default class Covid_19 extends React.Component {
                         <img className="logo" src={newConfirmed}/>
                         <br/>
                         <br/>
+
+                        {/*Affichage des données avec séparation des nombres*/}
                         <IntlProvider locale='fr'>
                           <FormattedNumber value={toDisplay['NewConfirmed']} />
                         </IntlProvider>
                     </Col>
-        
+
                     <Col xs="6" sm="3">
-                        
+
                         {/*Affichage des cas confirmés total*/}
                         <b>Confirmed</b>
                         <br/>
@@ -64,9 +68,9 @@ export default class Covid_19 extends React.Component {
                           <FormattedNumber value={toDisplay['TotalConfirmed']} />
                         </IntlProvider>
                     </Col>
-                    
+
                         <Col xs="6" sm="3">
-        
+
                         {/*Affichage des personnes décédées*/}
                         <b>Deaths</b>
                         <br/>
@@ -78,9 +82,9 @@ export default class Covid_19 extends React.Component {
                           <FormattedNumber value={toDisplay['TotalDeaths']} />
                         </IntlProvider>
                     </Col>
-        
+
                     <Col xs="6" sm="3">
-                
+
                         {/*Affichage des personnes guéries*/}
                         <b>Recovered</b>
                         <br/>

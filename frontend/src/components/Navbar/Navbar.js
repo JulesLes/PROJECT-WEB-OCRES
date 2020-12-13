@@ -8,6 +8,8 @@ const Navigation = (props) => {
 
     return (
       <div className="Navbar">
+      
+      {/*affichage de la bar de navigation*/}
         <Navbar>
             <Navbar.Brand href="#home">
               <img className="Logo" src={logo}/>

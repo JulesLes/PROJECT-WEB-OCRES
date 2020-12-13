@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "5fd569bf5a49916c2d1e10c7"
+  },
+  "nom": "Gadblet",
+  "prenom": "Aurelien",
+  "etat": "1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fd5e269a9faaa032bda7273"
+  },
+  "nom": "Lestrade",
+  "prenom": "Jules",
+  "etat": "0",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fd5fab6a9faaa032bda7275"
+  },
+  "nom": "Kourganoff",
+  "prenom": "Adrien",
+  "etat": "1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fd5fd8da9faaa032bda7277"
+  },
+  "nom": "Gremy",
+  "prenom": "Mickael",
+  "etat": "1",
+  "__v": 0
+}]

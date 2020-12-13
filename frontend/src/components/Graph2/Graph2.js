@@ -1,85 +1,69 @@
 import axios from 'axios';
 import React, { PureComponent } from 'react';
-import {ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,} from 'recharts';
+import {ResponsiveContainer, PieChart, Pie, Legend,Tooltip} from 'recharts';
 import './Graph2.css';
 
-const DataFormater = (number) => {
-    if(number > 1000000000){
-      return (number/1000000000).toString() + 'B';
-    }else if(number > 1000000){
-      return (number/1000000).toString() + 'M';
-    }else if(number > 1000){
-      return (number/1000).toString() + 'K';
-    }else{
-      return number.toString();
-    }
-}
-
-const data = [
-  {
-    name: '2A', CF: 54, NC: 12, amt: 2400,
-  },
-  {
-    name: '2B', CF: 8, NC: 12, amt: 2210,
-  },
-  {
-    name: '4A', CF: 3, NC: 20, amt: 2290,
-  },
-  {
-    name: '4B', CF: 11, NC: 9, amt: 2290,
-  },
-];
-
-
-export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/q4eonc12/';
+export default class Graph2 extends PureComponent {
+  static jsfiddleUrl = '//jsfiddle.net/alidingling/6okmehja/';
 
   state = {
-      data:[],
-      mapDatas: new Map()
-      //{'TD3', [1,6]}
-    
+      data:undefined,
+      nbrDeCas: 0,
+      nonContamine:0,
   };
 
+  //Appel le chargement des données de l'API
   componentDidMount() {
-      console.log('jsuis passé')
-      var url = 'http://localhost:3000/api/';
-      this.loadNews(url);
+      this.loadNews();
   }
 
-
-loadNews(url) {
-      axios.get(url)
-          .then(response => {console.log(response)})
+  //Permet le chargement des données de l'API
+  loadNews() {
+      axios.get('http://localhost:3000/api')
           .then(res => {
-              this.setState({data: res});
+              const test = res.data;
+              this.setState({data: test}, () => {});
           });
-      
-      this.state.data.forEach((elem)=>{
-          this.state.mapDatas.has(elem.groupe)?
-              elem.etat?this.state.mapDatas.get(elem.groupe)[0]++:this.state.mapDatas.get(elem.groupe)[1]++
-          :
-          elem.etat?this.state.mapDatas.set(elem.groupe,[1,0]):this.state.mapDatas.set(elem.groupe,[0,1])
-      })
-      for(const key of this.state.mapDatas.keys()){console.log(key)}
   }
 
-//insertNewStudent() {}
+  //Cacul le nombre de cas positifs et sains au covid
+  compter(){
+    var nbrDeCasBis = 0;
+    for(var i =0; i<this.state.data.length; i++){
+      if (this.state.data[i].etat == 1){
+        nbrDeCasBis++;
+      }
+    }
+    var somme = this.state.data.length - nbrDeCasBis;
+    this.setState({
+      nbrDeCas:nbrDeCasBis,
+      nonContamine: somme,
+    });
+  }
+
   render() {
+
+  let data = [ { name: 'Contamine', value: this.state.nbrDeCas, fill: "#E53824"}, { name: 'Non Contamine', value: this.state.nonContamine, fill: "#0000ff"},];
     return (
-      <div className="widgetGraph2">
+
+      <div className="widgetGraph2" >
+      {this.state.data ? this.compter():""}
         <h5>Class Data</h5>
-            <ResponsiveContainer width="95%" height={350}>
-              <BarChart width={500} height={300} data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5,}}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Legend />
-                  <Bar dataKey="NC" stackId="a" fill="#8884d8" />
-                  <Bar dataKey="CF" stackId="a" fill="#E53824" />
-              </BarChart>
+            <ResponsiveContainer width="100%" height={350} >
+
+            {/*Affichage des données en diagramme camenbert avec Recharts*/}
+            <PieChart height={300} data={data}>
+              <Pie dataKey="value" data={data} fill={data.color} />
+
+              {/*Legende flotante avec la sourie*/}
+              <Tooltip labelFormatter={() => undefined} />
+
+              {/*Legende*/}
+              <Legend />
+            </PieChart>
+
           </ResponsiveContainer>
+
     </div>
     );
   }

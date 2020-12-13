@@ -13,6 +13,7 @@ class SelectFormCovid extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  //Stocker le pays
   handleChange(e) {
     this.setState({nom: e.target.value});
   }
@@ -21,6 +22,8 @@ class SelectFormCovid extends React.Component {
     return (
       <div>
         <label>
+        
+          {/*Select Country Bar*/}
           <select value={this.state.nom} onChange={(e) => this.handleChange(e)} value={this.state.nom}>
             <option value="182"></option>
             <option value="8">Autralia</option>
@@ -32,6 +35,8 @@ class SelectFormCovid extends React.Component {
           </select>
         </label>
         <br />
+
+        {/*Bouton rechercher*/}
         <input type="submit" value="Submit" onClick={() => this.props.parentCallback(this.state.nom)}/>
       </div>
     );

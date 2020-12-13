@@ -1,0 +1,26 @@
+.AffichageBDD{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height:100px;
+  width: 100%;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto';
+  font-size: 0.9em;
+
+}
+
+.test p {
+  color: white;
+}
+
+.test b {
+  color: yellow;
+}
+
+.test p:nth-child(1) {
+  font-weight: bold;
+}

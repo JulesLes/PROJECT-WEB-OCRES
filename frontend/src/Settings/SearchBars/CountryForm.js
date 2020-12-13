@@ -3,25 +3,6 @@ import '../Settings.css';
 
 export default class CountryForm extends React.Component {
 
-  // const [value, setValue] = useState('')
-  //
-  // const {country, setCountry} = useContext(Context)
-  //
-  // const handleChange = (event) => {
-  //   setValue(event.target.value)
-  // }
-  //
-  // const handleSubmit = (event) => {
-  //   alert('You have submitted : ' + value);
-  //   event.preventDefault();
-  // }
-  //
-  // const handleClick = (event) => {
-  //   event.stopPropagation()
-  //   setCountry(value)
-  //   console.log(value)
-  //   console.log(country)
-  // }
   constructor(props){
     super(props);
     this.state = {
@@ -29,6 +10,7 @@ export default class CountryForm extends React.Component {
     }
   }
 
+  //Stocker le pays
   rechercher(e) {
     this.setState({nom: e.target.value})
   }
@@ -36,8 +18,12 @@ export default class CountryForm extends React.Component {
   render() {
   return (
     <div>
+
+      {/*SearchBar Pays*/}
       <input type="text" placeholder="Saisissez votre recherche" onChange={(e) => this.rechercher(e)} value={this.state.nom}/>
       <br />
+
+      {/*Bouton rechercher*/}
       <input type="submit" value="Submit" onClick={() => this.props.parentCallback(this.state.nom)}/>
     </div>
 

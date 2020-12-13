@@ -17,7 +17,7 @@ import Menu from '../components/Navbar/Menu';
 import {Context} from '../Context'
 import Footer from '../components/Footer/Footer';
 
-
+// PAGE HOME
 
 export default class Home extends React.Component {
 
@@ -32,21 +32,30 @@ export default class Home extends React.Component {
         return (
           <div className="Home">
             <div className="Page" style={{backgroundImage: `url(${homepage})` }} id="home">
+
+                {/*Bar de Navigation*/}
                 <div className="navbar" id="mn_menu2">
                     <Menu />
                 </div>
+
+                {/*Titre de la Home page*/}
                 <p className="Title">Welcome to the future<br />of Widgets</p>
+
+                {/*Affichage du bouton qui scroll  vers le bas*/}
                 <Link activeClass="active" to="widget" spy={true} smooth={true}>
                   <img className="butn" src={down}/>
                 </Link>
             </div>
+
+            {/*Page des Widgets*/}
             <div className="Widget" style={{backgroundImage: `url(${widdgetBack})` }} id="widget">
 
                 <ResponsiveContainer xs="450" md="700" lg="1300">
                     <div className="app-row" style={{margin: 0, padding: 0}}>
 
+                        {/*Widgets de la moitie suppérieure de l'ecran*/}
                         <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 4}}><Graph /></div>
-                        {/*<div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 4}}><Covid_19 paysCovid={this.props.countryCorona}/></div>*/}
+                        <div className="app-col-xs-12 app-col-md-12 app-col-lg-6" style={{padding: 4}}><Covid_19 paysCovid={this.props.countryCorona}/></div>
                         <div className="app-col-xs-12 app-col-md-6 app-col-lg-3" style={{padding: 4}}><Bourse /></div>
                         <div className="app-col-xs-12 app-col-md-6 app-col-lg-3" style={{padding: 4}}><Country pays={this.props.countryData}/></div>
 
@@ -58,6 +67,7 @@ export default class Home extends React.Component {
 
                     <div className="app-row2" style={{margin: 0, padding: 0}}>
 
+                        {/*Widgets de la moitie inferieure de l'ecran*/}
                         <div className="app-col-xs-12 app-col-md-12 app-col-lg-5" style={{padding: 4}}><SemaineContainer ville={this.props.cityMeteo}/></div>
                         <div className="app-col-xs-12 app-col-md-12 app-col-lg-5" style={{padding: 4}}><NewsWidget paysNews={this.props.countryNewsSearch}/></div>
                         <div className="app-col-xs-12 app-col-md-12 app-col-lg-2" style={{padding: 4}}><Graph2/></div>

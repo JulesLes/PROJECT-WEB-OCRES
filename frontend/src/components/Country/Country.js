@@ -9,12 +9,13 @@ export default class Country extends Component {
       toDisplay:''
   };
 
-  //Permet le chargement des données de l'API
+  //Appel le chargement des données de l'API
   componentDidMount() {
       var url = `https://restcountries.eu/rest/v2/name/${this.props.pays}?fullText=true`;
       this.loadNews(url);
   }
 
+  //Permet le chargement des données de l'API
   loadNews(url) {
       fetch(url)
           .then(response => response.json())
@@ -30,24 +31,26 @@ export default class Country extends Component {
         <div className="widgetCountry">
             <h5>Country data</h5>
             <Row className="Titre">
+
+                {/*Affichage de la Population et de la Capitale*/}
                 <Col xs="4">
                     <b>Population</b>
                     <br/>
-                    
+
                     {/*Affichage des données avec séparation des nombres*/}
                     <IntlProvider locale='fr'>
                       <FormattedNumber value={toDisplay['population']} />
                     </IntlProvider>
                     <br/>
                     <br/>
-        
+
                     {/*Affichage de la Capitale*/}
                     <b>Capital</b>
                     <br/>
                     <div className="number">{toDisplay['capital']}</div>
 
                 </Col>
-                
+
                 {/*Affichage du drapeau*/}
                 <Col xs="4">
                     <b>Flag</b>
@@ -55,14 +58,14 @@ export default class Country extends Component {
                     <img className="image" src={toDisplay['flag']} alt="news img"/>
                     <br/>
                 </Col>
-        
-                {/*Affichage de la Région*/}
+
+                {/*Affichage de la Région et de la Superficie*/}
                 <Col xs="4">
                     <b>Region</b>
                     <br/>
                     <div className="number">{toDisplay['region']}</div>
                     <br/>
-        
+
                     {/*Affichage de la Superficie*/}
                     <b>Area</b>
                     <br/>

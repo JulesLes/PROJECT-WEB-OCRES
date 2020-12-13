@@ -10,8 +10,10 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 const Menu = (props) => {
 
     return (
-        
+
         <div className="btn">
+
+        {/*affichage du menu deroulant quand l'écran est plus petit*/}
             <Dropdown as={ButtonGroup}>
                 <Button variant="success" id="btn"><img className="Logo" src={logo}/></Button>
 
@@ -23,7 +25,7 @@ const Menu = (props) => {
                             <a>Home</a>
                         </Link>
                     </Dropdown.Item>
-                    <Dropdown.Item> 
+                    <Dropdown.Item>
                         <Link activeClass="active" to="Settings" style={{padding: 0}}>
                             <a>Settings</a>
                         </Link>

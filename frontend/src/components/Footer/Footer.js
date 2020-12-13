@@ -10,6 +10,8 @@ render(){
       <div className="Footer">
       <ResponsiveContainer width="95%">
         <Row>
+        
+          {/*Affichage du Footer*/}
           <Col xs="4">
             <a>Mickael Gremy </a>
           </Col>

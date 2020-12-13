@@ -19,7 +19,7 @@ constructor(props){
     countryCovid: '182',
   }
 }
-    
+
 //Update des valeurs depuis la page Settings
 updateState = (e) => { //Country
   this.setState({
@@ -50,18 +50,23 @@ render(){
     <Router>
        <div className="App">
 
+            {/*Affichage de la Navbar*/}
             <div className="navbar" id="mn_menu">
                 <Navigation />
             </div>
-      
+
             {/*Permet à la NavBar de changer de page*/}
             <Switch>
 
                 <Route path='/Settings'>
+
+                    {/*Settings Page*/}
                     <Settings countryChange={this.updateState} cityChange={this.updateCity} newsChange={this.updateNews} covidChange={this.updateCovid}/>
                 </Route>
 
                 <Route path='/'>
+                
+                    {/*Home Page*/}
                     <HomePage countryData={this.state.countrySearch} cityMeteo={this.state.city} countryNewsSearch={this.state.newsSearch} countryCorona={this.state.countryCovid}/>
                 </Route>
 

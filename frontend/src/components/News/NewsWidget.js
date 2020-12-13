@@ -11,12 +11,13 @@ export default class NewsWidget extends Component {
         newsToDisplay3: ''
     };
 
-   //Permet le chargement des données de l'API
+   //Appel le chargement des données de l'API
     componentDidMount() {
         var url = `https://newsapi.org/v2/top-headlines?country=${this.props.paysNews}&apiKey=448fce7c3a0e49c686457f7dbc4ca63f`;
         this.loadNews(url);
     }
 
+    //Permet le chargement des données de l'API
     loadNews(url) {
         fetch(url)
             .then(response => response.json())
@@ -31,22 +32,31 @@ export default class NewsWidget extends Component {
 
 
     render() {
-        
-        {/*Affichage des 3ères données de l'API*/}
+
+        {/*Affichage des 3ères News de l'API*/}
         const {newsToDisplay1} = this.state;
         const {newsToDisplay2} = this.state;
         const {newsToDisplay3} = this.state;
         return (
             <div className="widgetNews">
                 <div>
+
+                  {/*Titre du Widget*/}
                   <h5>News</h5>
+
+                  {/*Premier article*/}
                   <div className="article alignement">
                     <div>
+                      {/*Affichage de la source*/}
                       <div className="source">{newsToDisplay1.source ? newsToDisplay1.source.name : '?'}</div>
+
+                      {/*Affichage du titre*/}
                       <a className="titre" href={newsToDisplay1['url']}>{newsToDisplay1['title']}</a>
                     </div>
+                      {/*Affichage de l'illustration*/}
                       <img className="image" src={newsToDisplay1['urlToImage']} alt="news img"/>
                   </div>
+                  
                   <div className="article alignement">
                     <div>
                       <div className="source">{newsToDisplay2.source ? newsToDisplay2.source.name : '?'}</div>

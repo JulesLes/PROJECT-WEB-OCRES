@@ -1,12 +1,9 @@
 import React, { useContext, createContext, useState, useEffect } from "react";
 import homepage  from "../image/WidgetBack.jpg";
 import Menu from '../components/Navbar/Menu';
-import NameForm from './SearchBars/NameForm';
-import FirstName from './SearchBars/FirstName';
-import LastName from './SearchBars/LastName';
+import MeteoForm from './SearchBars/MeteoForm';
+import ClassForm from './SearchBars/ClassForm';
 import SelectFormNews from './SearchBars/SelectFormNews';
-import SelectForm2 from './SearchBars/SelectForm2';
-import SelectForm3 from './SearchBars/SelectForm3';
 import SelectFormCovid from './SearchBars/SelectFormCovid';
 import './Settings.css';
 import WeatherWidget from "../image/Settings/WeatherWidget.png";
@@ -30,12 +27,12 @@ export default class Settings extends React.Component {
         return (
             <div className="Settings" id="Settings">
 
+                {/*Bar de Navigation*/}
                 <div className="navbar" id="mn_menu2">
-
                     <Menu />
-
                 </div>
 
+                {/*Page Settings*/}
                 <div className="Page2" style={{backgroundImage: `url(${homepage})` }}>
 
                     <div className="Settings">
@@ -50,17 +47,18 @@ export default class Settings extends React.Component {
 
                             <div className="app-row" style={{margin: 0, padding: 0}}>
 
-
+                              {/*Affichage de la Searchbar Meteo*/}
                                 <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
 
                                     <div className="WeatherWidget">
                                         <img className="image" src={WeatherWidget}/>
                                         <h6>Weather Widget</h6>
-                                      <NameForm parentCallback={this.props.cityChange}/>
+                                      <MeteoForm parentCallback={this.props.cityChange}/>
                                     </div>
 
                                 </div>
 
+                                {/*Affichage de la Searchbar pour un pays*/}
                                 <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
 
                                     <div className="CountryWidget">
@@ -75,6 +73,7 @@ export default class Settings extends React.Component {
 
                             <div className="app-row" style={{margin: 0, padding: 0}}>
 
+                                {/*Affichage de la Searchbar pour les News*/}
                                 <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
 
                                     <div className="NewsWidget">
@@ -85,6 +84,7 @@ export default class Settings extends React.Component {
 
                                 </div>
 
+                                {/*Affichage de la Searchbar pour les stats du covid*/}
                                 <div className="app-col-xs-12 app-col-md-6 app-col-lg-6" style={{padding: 2}}>
 
                                     <div className="Covid19Widget">
@@ -101,26 +101,12 @@ export default class Settings extends React.Component {
 
                                 <div className="app-col-xs-12 app-col-md-12 app-col-lg-12" style={{padding: 2}}>
 
+                                    {/*Affichage de la Searchbar pour le graph de la classe*/}
                                     <div className="PieWidget">
                                         <img className="image" src={Covid19Widget}/>
                                         <h6>Class data</h6>
-                                        <div className="app-row" style={{margin: 0, padding: 0}}>
-
-                                            <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
                                               <br/>
-                                              {/*<FirstName />*/}
-                                              <br/>
-                                              {/*<LastName />*/}
-                                            </div>
-
-                                            <div className="app-col-xs-12 app-col-md-6 app-col-lg-6">
-                                              <br/>
-                                              <SelectForm2 />
-                                              <br/>
-                                              <SelectForm3 />
-                                            </div>
-
-                                        </div>
+                                              <ClassForm />
                                     </div>
 
                                 </div>
